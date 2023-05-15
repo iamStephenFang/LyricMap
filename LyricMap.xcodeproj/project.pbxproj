@@ -7,20 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571562A0D15A8004BBF62 /* MapViewController.swift */; };
+		4D4571592A0D16F9004BBF62 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */; };
+		4D45715B2A0D1763004BBF62 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* SearchViewController.swift */; };
+		4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */; };
 		4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */; };
 		4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */; };
-		4D56EAF22A0BBDF400BD615C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAF12A0BBDF400BD615C /* ViewController.swift */; };
-		4D56EAF52A0BBDF400BD615C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF32A0BBDF400BD615C /* Main.storyboard */; };
+		4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAF12A0BBDF400BD615C /* TabViewController.swift */; };
 		4D56EAF72A0BBDF600BD615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF62A0BBDF600BD615C /* Assets.xcassets */; };
 		4D56EAFA2A0BBDF600BD615C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */; };
+		4D8803542A12618600FB6368 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8803532A12618600FB6368 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4571562A0D15A8004BBF62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		4D45715A2A0D1763004BBF62 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4D56EAEA2A0BBDF400BD615C /* LyricMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D56EAF12A0BBDF400BD615C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4D56EAF42A0BBDF400BD615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D56EAF12A0BBDF400BD615C /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		4D56EAF62A0BBDF600BD615C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D56EAF92A0BBDF600BD615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D56EAFB2A0BBDF600BD615C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,12 +38,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8803542A12618600FB6368 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D45715E2A0DF3FA004BBF62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4D56EAE12A0BBDF400BD615C = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +71,27 @@
 		4D56EAEC2A0BBDF400BD615C /* LyricMap */ = {
 			isa = PBXGroup;
 			children = (
+				4D8803552A1262A200FB6368 /* View */,
+				4D45715E2A0DF3FA004BBF62 /* Model */,
+				4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */,
 				4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */,
 				4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */,
-				4D56EAF12A0BBDF400BD615C /* ViewController.swift */,
-				4D56EAF32A0BBDF400BD615C /* Main.storyboard */,
+				4D56EAF12A0BBDF400BD615C /* TabViewController.swift */,
+				4D4571562A0D15A8004BBF62 /* MapViewController.swift */,
+				4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */,
+				4D45715A2A0D1763004BBF62 /* SearchViewController.swift */,
 				4D56EAF62A0BBDF600BD615C /* Assets.xcassets */,
 				4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */,
 				4D56EAFB2A0BBDF600BD615C /* Info.plist */,
 			);
 			path = LyricMap;
+			sourceTree = "<group>";
+		};
+		4D8803552A1262A200FB6368 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +110,9 @@
 			dependencies = (
 			);
 			name = LyricMap;
+			packageProductDependencies = (
+				4D8803532A12618600FB6368 /* SnapKit */,
+			);
 			productName = LyricMap;
 			productReference = 4D56EAEA2A0BBDF400BD615C /* LyricMap.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 4D56EAE12A0BBDF400BD615C;
+			packageReferences = (
+				4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4D56EAEB2A0BBDF400BD615C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +160,6 @@
 			files = (
 				4D56EAFA2A0BBDF600BD615C /* LaunchScreen.storyboard in Resources */,
 				4D56EAF72A0BBDF600BD615C /* Assets.xcassets in Resources */,
-				4D56EAF52A0BBDF400BD615C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +170,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D56EAF22A0BBDF400BD615C /* ViewController.swift in Sources */,
+				4D45715B2A0D1763004BBF62 /* SearchViewController.swift in Sources */,
+				4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */,
+				4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */,
+				4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */,
+				4D4571592A0D16F9004BBF62 /* BookmarkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4D56EAF32A0BBDF400BD615C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D56EAF42A0BBDF400BD615C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,11 +318,12 @@
 				DEVELOPMENT_TEAM = U9ND6HRPEN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LyricMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LyricMap;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +347,12 @@
 				DEVELOPMENT_TEAM = U9ND6HRPEN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LyricMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LyricMap;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D8803532A12618600FB6368 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D56EAE22A0BBDF400BD615C /* Project object */;
 }

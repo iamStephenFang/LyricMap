@@ -2,6 +2,8 @@
 "welcome_map_subtitle" = "支持以地图查看附近所有与歌词相关的音乐";
 "welcome_map_title" = "地图";
 "welcome_title" = "欢迎使用";
+"map_failed_subtitle" = "请检查GPS及网络连接";
+"map_failed_title" = "获取位置失败";
 "welcome_bookmark_subtitle" = "查看具体的歌词、歌曲地点信息，可以将其收藏方便搜索";
 "welcome_bookmark_title" = "收藏";
 "welcome_collection_subtitle" = "查看他人创建的收藏夹，或创建专属于你的收藏";

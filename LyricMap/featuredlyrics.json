@@ -1,0 +1,223 @@
+[
+	{
+        "id": 1,
+		"type": "featured",
+		"title": "",
+		"subtitle": "",
+		"items": [
+			{
+				"id": 1,
+				"tagline": "赤柱",
+				"name": "老派約會之必要",
+				"subheading": "怎知道霎眼 就談到 赤柱了",
+				"image": "赤柱",
+			},
+			{
+				"id": 2,
+				"tagline": "See it in dark mode",
+				"name": "Smartwhirl",
+				"subheading": "People who love whirling just like you!",
+				"image": "Heading2",
+			},
+			{
+				"id": 3,
+				"tagline": "New update",
+				"name": "Professorify",
+				"subheading": "Introducing your portable professor.",
+				"image": "Heading3",
+			},
+			{
+				"id": 4,
+				"tagline": "Featured",
+				"name": "SituationMe",
+				"subheading": "Your Situation. Dedicated.",
+				"image": "Heading4",
+			},
+		]
+	},
+	{
+        "id": 2,
+		"type": "mediumTable",
+		"title": "Lyrics Near You",
+		"subtitle": "These songs are mentioned near you",
+		"items": [
+			{
+				"id": 11,
+                "tagline": "",
+				"name": "老派約會之必要",
+				"subheading": "MC 張天賦",
+				"image": "老派約會之必要",
+			},
+			{
+				"id": 12,
+				"tagline": "",
+				"name": "中環",
+				"subheading": "側田",
+				"image": "中環",
+			},
+			{
+				"id": 13,
+				"tagline": "",
+				"name": "彌敦道",
+				"subheading": "洪卓立",
+				"image": "彌敦道",
+			},
+			{
+				"id": 14,
+				"tagline": "Featured",
+				"name": "SituationMe",
+				"subheading": "Your Situation. Dedicated.",
+				"image": "iOS4",
+			},
+			{
+				"id": 15,
+				"tagline": "New update",
+				"name": "Squeally",
+				"subheading": "Motivate your niche in the squealing ecosystem.",
+				"image": "iOS5",
+			},
+			{
+				"id": 16,
+				"tagline": "See it in dark mode",
+				"name": "youplayer",
+				"subheading": "Harmonize your inner player.",
+				"image": "iOS6",
+			},
+			{
+				"id": 17,
+				"tagline": "Must-have app",
+				"name": "Spellnow",
+				"subheading": "Dare to spell the smart way.",
+				"image": "iOS7",
+			},
+			{
+				"id": 18,
+				"tagline": "New update",
+				"name": "S.A.C.K.",
+				"subheading": "Sack people online using our cloud software.",
+				"image": "iOS8",
+			},
+			{
+				"id": 19,
+				"tagline": "See it in dark mode",
+				"name": "Yodely",
+				"subheading": "You like to yodel. Yodely does too.",
+				"image": "iOS9",
+			}
+		]
+	},
+	{
+        "id": 3,
+		"type": "mediumTable",
+		"title": "Discover Old Style of Hong Kong",
+		"subtitle": "Weaving in and out of 80s and 90s lyrics",
+		"items": [
+			{
+				"id": 21,
+				"tagline": "Featured",
+				"name": "Strokey",
+				"subheading": "You'll never stroke the same way again.",
+				"image": "iOS1",
+			},
+			{
+				"id": 22,
+				"tagline": "See it in dark mode",
+				"name": "Smartwhirl",
+				"subheading": "People who love whirling just like you!",
+				"image": "iOS2",
+			},
+			{
+				"id": 23,
+				"tagline": "New update",
+				"name": "Professorify",
+				"subheading": "Introducing the world’s first experienced professor.",
+				"image": "iOS3",
+			},
+			{
+				"id": 24,
+				"tagline": "Featured",
+				"name": "SituationMe",
+				"subheading": "Your Situation. Dedicated.",
+				"image": "iOS4",
+			},
+			{
+				"id": 25,
+				"tagline": "New update",
+				"name": "Squeally",
+				"subheading": "Motivate your niche in the squealing ecosystem.",
+				"image": "iOS5",
+			},
+			{
+				"id": 26,
+				"tagline": "See it in dark mode",
+				"name": "youplayer",
+				"subheading": "Harmonize your inner player.",
+				"image": "iOS6",
+			},
+			{
+				"id": 27,
+				"tagline": "Must-have app",
+				"name": "Spellnow",
+				"subheading": "Dare to spell the smart way.",
+				"image": "iOS7",
+			},
+			{
+				"id": 28,
+				"tagline": "New update",
+				"name": "S.A.C.K.",
+				"subheading": "Sack people online using our cloud software.",
+				"image": "iOS8",
+			},
+			{
+				"id": 29,
+				"tagline": "See it in dark mode",
+				"name": "Yodely",
+				"subheading": "You like to yodel. Yodely does too.",
+				"image": "iOS9",
+			}
+		]
+	},
+	{
+        "id": 4,
+		"type": "smallTable",
+		"title": "Top Collections",
+		"subtitle": "",
+		"items": [
+			{
+				"id": 31,
+				"tagline": "",
+				"name": "Apple Watch Apps",
+				"subheading": "",
+				"image": "Category1",
+			},
+			{
+				"id": 32,
+				"tagline": "",
+				"name": "AR Apps",
+				"subheading": "",
+				"image": "Category2",
+			},
+			{
+				"id": 33,
+				"tagline": "",
+				"name": "Photos & Video",
+				"subheading": "",
+				"image": "Category3",
+			},
+			{
+				"id": 34,
+				"tagline": "",
+				"name": "Entertainment",
+				"subheading": "",
+				"image": "Category4",
+			},
+			{
+				"id": 35,
+				"tagline": "",
+				"name": "Health & Fitness",
+				"subheading": "",
+				"image": "Category5",
+			}
+		]
+	}
+]

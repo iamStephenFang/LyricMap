@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LyricInfo {
+struct LyricInfo: Decodable, Hashable {
     // Name of the song
     let songName: String
     

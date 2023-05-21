@@ -9,8 +9,8 @@ import UIKit
 
 class TabViewController: UITabBarController {
 
-    static let iconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 21))
-    static let selectedIconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 23, weight: .semibold))
+    static let iconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 19))
+    static let selectedIconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 21, weight: .semibold))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +18,9 @@ class TabViewController: UITabBarController {
         delegate = self
         
         viewControllers = [
+            createNavController(for: DiscoverViewController(),tag: 1,  image: UIImage(systemName: "safari")!, selectedImage: UIImage(systemName: "safari.fill")!),
             createNavController(for: MapViewController(), tag: 0,  image: UIImage(systemName: "map")!, selectedImage: UIImage(systemName: "map.fill")!),
-            createNavController(for: BookmarkViewController(),tag: 1,  image: UIImage(systemName: "bookmark")!, selectedImage: UIImage(systemName: "bookmark.fill")!),
-            createNavController(for: SearchViewController(), tag: 2,  image: UIImage(systemName: "magnifyingglass")!, selectedImage: UIImage(systemName: "magnifyingglass")!),
+            createNavController(for: BookmarkViewController(), tag: 2,  image: UIImage(systemName: "bookmark")!, selectedImage: UIImage(systemName: "bookmark.fill")!),
         ]
     }
     

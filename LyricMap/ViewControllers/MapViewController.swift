@@ -17,7 +17,7 @@ class MapViewController: BaseViewController {
     fileprivate var mapView: MKMapView!
     
     fileprivate var userLocationButton: UIButton!
-    fileprivate var realityButton: UIButton!
+    fileprivate var nearbyButton: UIButton!
     
     fileprivate let locationManager = CLLocationManager()
     private let regionInMeters: Double = 10000
@@ -46,7 +46,7 @@ class MapViewController: BaseViewController {
         mapView.delegate = self
         
         mapView.mapType = .standard
-        mapView.showsBuildings = false
+        mapView.showsBuildings = true
         mapView.showsTraffic = false
         mapView.pointOfInterestFilter = .excludingAll
         mapView.showsScale = false
@@ -77,32 +77,54 @@ class MapViewController: BaseViewController {
     }
     
     private func setupSidePanel() {
-        userLocationButton = UIButton(type: .system)
-        var config = UIButton.Configuration.gray()
-        config.cornerStyle = .small
-        config.image = UIImage(systemName: "location.fill")
-        userLocationButton.configuration = config
-        userLocationButton.addTarget(self, action: #selector(recenterUserLocation), for: .touchUpInside)
-        view.addSubview(userLocationButton)
-        userLocationButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview().offset(30)
+        let sidePanel = UIView()
+        sidePanel.backgroundColor = .systemGroupedBackground
+        sidePanel.layer.cornerRadius = 8.0
+        sidePanel.layer.masksToBounds = false
+        sidePanel.layer.shadowOffset = CGSize(width: 0, height: 4)
+        sidePanel.layer.shadowColor = UIColor.black.withAlphaComponent(0.08).cgColor
+        sidePanel.layer.shadowOpacity = 1
+        sidePanel.layer.shadowRadius = 8
+        view.addSubview(sidePanel)
+        sidePanel.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-UIDefine.horizontalMargin)
-            make.height.equalTo(UIDefine.buttonSize)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-UIDefine.buttonSize)
+            make.height.equalTo(UIDefine.buttonSize * 2)
             make.width.equalTo(UIDefine.buttonSize)
         }
         
-        realityButton = UIButton(type: .system)
-        var arConfig = UIButton.Configuration.gray()
-        arConfig.cornerStyle = .small
-        arConfig.image = UIImage(systemName: "cube.transparent")
-        realityButton.configuration = arConfig
-        realityButton.addTarget(self, action: #selector(presentRealityView), for: .touchUpInside)
-        view.addSubview(realityButton)
-        realityButton.snp.makeConstraints { make in
-            make.centerY.equalToSuperview().offset(-30)
-            make.right.equalToSuperview().offset(-UIDefine.horizontalMargin)
+        let sidePanelLine = UIView()
+        sidePanelLine.backgroundColor = UIColor.separator
+        sidePanel.addSubview(sidePanelLine)
+        sidePanelLine.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.height.equalTo(0.5)
+        }
+        
+        userLocationButton = UIButton()
+        userLocationButton.tintColor = UIColor(hexString: "5F8392")
+        userLocationButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
+        userLocationButton.addTarget(self, action: #selector(recenterUserLocation), for: .touchUpInside)
+        sidePanel.addSubview(userLocationButton)
+        userLocationButton.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.height.equalTo(UIDefine.buttonSize)
-            make.width.equalTo(UIDefine.buttonSize)
+        }
+        
+        nearbyButton = UIButton()
+        nearbyButton.tintColor = UIColor(hexString: "5F8392")
+        nearbyButton.setImage(UIImage(systemName: "list.bullet"), for: .normal)
+        nearbyButton.addTarget(self, action: #selector(presentNearbyPlaces), for: .touchUpInside)
+        sidePanel.addSubview(nearbyButton)
+        nearbyButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.height.equalTo(UIDefine.buttonSize)
         }
     }
     
@@ -140,8 +162,15 @@ class MapViewController: BaseViewController {
         centerViewOnUserLocation()
     }
     
-    @objc private func presentRealityView() {
-        present(ARLyricViewController(), animated: true)
+    @objc private func presentNearbyPlaces() {
+        let containerViewController = NearbyPlacesViewController()
+        if let sheet = containerViewController.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet
+                .prefersGrabberVisible = true
+            sheet.preferredCornerRadius = UIDefine.sheetCornerRadius
+        }
+        self.present(containerViewController, animated: true, completion: nil)
     }
 }
 
@@ -161,7 +190,6 @@ extension MapViewController: MKMapViewDelegate {
             view = LyricMarkerView(annotation: annotation, reuseIdentifier: "LyricMarkerView")
             if let customAnnotationView = view as? LyricMarkerView {
                 let imageView = customAnnotationView.subviews.first as? UIImageView
-                print(place.lyricInfo.albumImageUrl)
                 imageView?.sd_setImage(with: URL(string: place.lyricInfo.albumImageUrl))
             }
             view.canShowCallout = true
@@ -205,8 +233,8 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         let toast = Toast.default(
             image: UIImage(systemName: "location.slash")!,
-            title: "Failed to get location",
-            subtitle: "Please check internet connection"
+            title: NSLocalizedString("map_failed_title", comment: ""),
+            subtitle: NSLocalizedString("map_failed_subtitle", comment: "")
         )
         toast.show()
     }

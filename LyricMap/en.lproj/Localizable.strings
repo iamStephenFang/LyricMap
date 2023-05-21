@@ -2,6 +2,8 @@
 "welcome_map_subtitle" = "Support for viewing all music related to lyrics in the vicinity as a map.";
 "welcome_map_title" = "Map";
 "welcome_title" = "Welcome To";
+"map_failed_subtitle" = "Please check GPS or internet connection";
+"map_failed_title" = "Failed to get location";
 "welcome_bookmark_subtitle" = "View specific lyrics, song location information and bookmark them for easy searching";
 "welcome_bookmark_title" = "Bookmark";
 "welcome_collection_subtitle" = "View featured collections created or create a collection just for you";

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1A6DD12A18FF6F004ADCA1 /* LyricMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DD02A18FF6F004ADCA1 /* LyricMarkerView.swift */; };
+		4D1A6DD72A19056B004ADCA1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1A6DD62A19056B004ADCA1 /* SDWebImage */; };
+		4D1A6DD92A19056B004ADCA1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1A6DD82A19056B004ADCA1 /* SDWebImageMapKit */; };
+		4D1A6DDC2A19BB8B004ADCA1 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1A6DDB2A19BB8B004ADCA1 /* Toast */; };
+		4D1A6DDE2A19C3FA004ADCA1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DDD2A19C3FA004ADCA1 /* UIViewController+Extensions.swift */; };
+		4D1A6DE02A19CAA1004ADCA1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DDF2A19CAA1004ADCA1 /* CollectionViewController.swift */; };
+		4D1A6DE22A19DF80004ADCA1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DE12A19DF80004ADCA1 /* WelcomeViewController.swift */; };
+		4D1A6DE42A19E227004ADCA1 /* FeatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DE32A19E227004ADCA1 /* FeatureInfo.swift */; };
+		4D1A6DE62A19E483004ADCA1 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DE52A19E483004ADCA1 /* Bundle+Extensions.swift */; };
+		4D1A6DE82A19E5CC004ADCA1 /* WelcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DE72A19E5CC004ADCA1 /* WelcomeManager.swift */; };
+		4D1A6DEA2A19E64A004ADCA1 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DE92A19E64A004ADCA1 /* UserDefaults+Extensions.swift */; };
+		4D1A6DEC2A19E68A004ADCA1 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DEB2A19E68A004ADCA1 /* UIApplication+Extensions.swift */; };
+		4D1A6DF12A1A0584004ADCA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D1A6DF32A1A0584004ADCA1 /* Localizable.strings */; };
 		4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571562A0D15A8004BBF62 /* MapViewController.swift */; };
 		4D4571592A0D16F9004BBF62 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */; };
 		4D45715B2A0D1763004BBF62 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* SearchViewController.swift */; };
@@ -17,9 +30,26 @@
 		4D56EAF72A0BBDF600BD615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF62A0BBDF600BD615C /* Assets.xcassets */; };
 		4D56EAFA2A0BBDF600BD615C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */; };
 		4D8803542A12618600FB6368 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8803532A12618600FB6368 /* SnapKit */; };
+		4D88035A2A126AAC00FB6368 /* MacroDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8803592A126AAC00FB6368 /* MacroDefines.swift */; };
+		4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */; };
+		4D88035E2A147B1800FB6368 /* LyricPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035D2A147B1800FB6368 /* LyricPlace.swift */; };
+		4D8803602A147B7600FB6368 /* LyricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035F2A147B7600FB6368 /* LyricInfo.swift */; };
+		4D8803632A147DF000FB6368 /* LyricsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8803622A147DF000FB6368 /* LyricsKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D1A6DD02A18FF6F004ADCA1 /* LyricMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricMarkerView.swift; sourceTree = "<group>"; };
+		4D1A6DDD2A19C3FA004ADCA1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		4D1A6DDF2A19CAA1004ADCA1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		4D1A6DE12A19DF80004ADCA1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4D1A6DE32A19E227004ADCA1 /* FeatureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureInfo.swift; sourceTree = "<group>"; };
+		4D1A6DE52A19E483004ADCA1 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		4D1A6DE72A19E5CC004ADCA1 /* WelcomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeManager.swift; sourceTree = "<group>"; };
+		4D1A6DE92A19E64A004ADCA1 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		4D1A6DEB2A19E68A004ADCA1 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		4D1A6DF22A1A0584004ADCA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D1A6DF42A1A05AA004ADCA1 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4D1A6DF52A1A05B6004ADCA1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4D4571562A0D15A8004BBF62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		4D45715A2A0D1763004BBF62 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +61,10 @@
 		4D56EAF62A0BBDF600BD615C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D56EAF92A0BBDF600BD615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D56EAFB2A0BBDF600BD615C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8803592A126AAC00FB6368 /* MacroDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefines.swift; sourceTree = "<group>"; };
+		4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARLyricViewController.swift; sourceTree = "<group>"; };
+		4D88035D2A147B1800FB6368 /* LyricPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricPlace.swift; sourceTree = "<group>"; };
+		4D88035F2A147B7600FB6368 /* LyricInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1A6DD72A19056B004ADCA1 /* SDWebImage in Frameworks */,
 				4D8803542A12618600FB6368 /* SnapKit in Frameworks */,
+				4D1A6DD92A19056B004ADCA1 /* SDWebImageMapKit in Frameworks */,
+				4D1A6DDC2A19BB8B004ADCA1 /* Toast in Frameworks */,
+				4D8803632A147DF000FB6368 /* LyricsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +86,9 @@
 		4D45715E2A0DF3FA004BBF62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D88035D2A147B1800FB6368 /* LyricPlace.swift */,
+				4D88035F2A147B7600FB6368 /* LyricInfo.swift */,
+				4D1A6DE32A19E227004ADCA1 /* FeatureInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -71,18 +112,17 @@
 		4D56EAEC2A0BBDF400BD615C /* LyricMap */ = {
 			isa = PBXGroup;
 			children = (
+				4D8803642A148C1D00FB6368 /* ViewControllers */,
+				4D8803582A126A6300FB6368 /* Common */,
 				4D8803552A1262A200FB6368 /* View */,
 				4D45715E2A0DF3FA004BBF62 /* Model */,
-				4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */,
 				4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */,
 				4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */,
-				4D56EAF12A0BBDF400BD615C /* TabViewController.swift */,
-				4D4571562A0D15A8004BBF62 /* MapViewController.swift */,
-				4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */,
-				4D45715A2A0D1763004BBF62 /* SearchViewController.swift */,
+				4D1A6DF32A1A0584004ADCA1 /* Localizable.strings */,
 				4D56EAF62A0BBDF600BD615C /* Assets.xcassets */,
 				4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */,
 				4D56EAFB2A0BBDF600BD615C /* Info.plist */,
+				4D1A6DE72A19E5CC004ADCA1 /* WelcomeManager.swift */,
 			);
 			path = LyricMap;
 			sourceTree = "<group>";
@@ -90,8 +130,36 @@
 		4D8803552A1262A200FB6368 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D1A6DD02A18FF6F004ADCA1 /* LyricMarkerView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4D8803582A126A6300FB6368 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */,
+				4D8803592A126AAC00FB6368 /* MacroDefines.swift */,
+				4D1A6DDD2A19C3FA004ADCA1 /* UIViewController+Extensions.swift */,
+				4D1A6DE52A19E483004ADCA1 /* Bundle+Extensions.swift */,
+				4D1A6DE92A19E64A004ADCA1 /* UserDefaults+Extensions.swift */,
+				4D1A6DEB2A19E68A004ADCA1 /* UIApplication+Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4D8803642A148C1D00FB6368 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D56EAF12A0BBDF400BD615C /* TabViewController.swift */,
+				4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */,
+				4D45715A2A0D1763004BBF62 /* SearchViewController.swift */,
+				4D4571582A0D16F9004BBF62 /* BookmarkViewController.swift */,
+				4D4571562A0D15A8004BBF62 /* MapViewController.swift */,
+				4D1A6DDF2A19CAA1004ADCA1 /* CollectionViewController.swift */,
+				4D1A6DE12A19DF80004ADCA1 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +180,10 @@
 			name = LyricMap;
 			packageProductDependencies = (
 				4D8803532A12618600FB6368 /* SnapKit */,
+				4D8803622A147DF000FB6368 /* LyricsKit */,
+				4D1A6DD62A19056B004ADCA1 /* SDWebImage */,
+				4D1A6DD82A19056B004ADCA1 /* SDWebImageMapKit */,
+				4D1A6DDB2A19BB8B004ADCA1 /* Toast */,
 			);
 			productName = LyricMap;
 			productReference = 4D56EAEA2A0BBDF400BD615C /* LyricMap.app */;
@@ -139,10 +211,15 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-HK",
+				"zh-Hans",
 			);
 			mainGroup = 4D56EAE12A0BBDF400BD615C;
 			packageReferences = (
 				4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4D8803612A147DF000FB6368 /* XCRemoteSwiftPackageReference "LyricsKit" */,
+				4D1A6DD52A19056B004ADCA1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				4D1A6DDA2A19BB8B004ADCA1 /* XCRemoteSwiftPackageReference "toast-swift" */,
 			);
 			productRefGroup = 4D56EAEB2A0BBDF400BD615C /* Products */;
 			projectDirPath = "";
@@ -159,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D56EAFA2A0BBDF600BD615C /* LaunchScreen.storyboard in Resources */,
+				4D1A6DF12A1A0584004ADCA1 /* Localizable.strings in Resources */,
 				4D56EAF72A0BBDF600BD615C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,11 +249,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D45715B2A0D1763004BBF62 /* SearchViewController.swift in Sources */,
+				4D8803602A147B7600FB6368 /* LyricInfo.swift in Sources */,
+				4D1A6DE82A19E5CC004ADCA1 /* WelcomeManager.swift in Sources */,
+				4D1A6DEA2A19E64A004ADCA1 /* UserDefaults+Extensions.swift in Sources */,
+				4D1A6DDE2A19C3FA004ADCA1 /* UIViewController+Extensions.swift in Sources */,
+				4D1A6DE62A19E483004ADCA1 /* Bundle+Extensions.swift in Sources */,
+				4D88035E2A147B1800FB6368 /* LyricPlace.swift in Sources */,
+				4D1A6DE42A19E227004ADCA1 /* FeatureInfo.swift in Sources */,
+				4D1A6DE02A19CAA1004ADCA1 /* CollectionViewController.swift in Sources */,
 				4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */,
+				4D1A6DEC2A19E68A004ADCA1 /* UIApplication+Extensions.swift in Sources */,
+				4D1A6DE22A19DF80004ADCA1 /* WelcomeViewController.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */,
 				4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */,
+				4D1A6DD12A18FF6F004ADCA1 /* LyricMarkerView.swift in Sources */,
 				4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */,
+				4D88035A2A126AAC00FB6368 /* MacroDefines.swift in Sources */,
+				4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */,
 				4D4571592A0D16F9004BBF62 /* BookmarkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +274,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4D1A6DF32A1A0584004ADCA1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D1A6DF22A1A0584004ADCA1 /* en */,
+				4D1A6DF42A1A05AA004ADCA1 /* zh-HK */,
+				4D1A6DF52A1A05B6004ADCA1 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -198,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -258,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -390,6 +493,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4D1A6DD52A19056B004ADCA1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		4D1A6DDA2A19BB8B004ADCA1 /* XCRemoteSwiftPackageReference "toast-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BastiaanJansen/toast-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -398,13 +517,41 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		4D8803612A147DF000FB6368 /* XCRemoteSwiftPackageReference "LyricsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ddddxxx/LyricsKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D1A6DD62A19056B004ADCA1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1A6DD52A19056B004ADCA1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		4D1A6DD82A19056B004ADCA1 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1A6DD52A19056B004ADCA1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		4D1A6DDB2A19BB8B004ADCA1 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1A6DDA2A19BB8B004ADCA1 /* XCRemoteSwiftPackageReference "toast-swift" */;
+			productName = Toast;
+		};
 		4D8803532A12618600FB6368 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		4D8803622A147DF000FB6368 /* LyricsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8803612A147DF000FB6368 /* XCRemoteSwiftPackageReference "LyricsKit" */;
+			productName = LyricsKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

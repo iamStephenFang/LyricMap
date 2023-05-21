@@ -27,7 +27,7 @@ class TabViewController: UITabBarController {
     private func createNavController(for rootViewController: UIViewController,
                                      tag: Int,
                                      image: UIImage,
-                                     selectedImage: UIImage) -> UIViewController {
+                                     selectedImage: UIImage) -> UIViewController {        
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.tag = tag
         navController.tabBarItem.image = image.withConfiguration(TabViewController.iconConfig).imageWithoutBaseline()

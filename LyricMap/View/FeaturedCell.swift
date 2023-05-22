@@ -29,7 +29,7 @@ class FeaturedCell: UICollectionViewCell, SelfConfiguringCell {
         name.font = UIFont.preferredFont(forTextStyle: .title2)
         name.textColor = .label
 
-        subtitle.font = UIFont.preferredFont(forTextStyle: .title2)
+        subtitle.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitle.textColor = .secondaryLabel
 
         imageView.layer.cornerRadius = 5

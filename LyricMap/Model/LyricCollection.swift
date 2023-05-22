@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct LyricCollection: Decodable, Hashable {
+    let id: UUID
+    let title: String
+    let subtitle: String
+    let imageName: String
+    let infos: [LyricInfo]
+}

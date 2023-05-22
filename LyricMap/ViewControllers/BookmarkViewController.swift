@@ -9,26 +9,26 @@ import UIKit
 
 class BookmarkViewController: BaseViewController {
     
+    var lyricCollections = [
+        [
+            LyricCollection(id: UUID(), title: "Favorites", subtitle: "My Favorite", imageName: "Favorite", infos: []),
+            LyricCollection(id: UUID(), title: "Visited", subtitle: "Visited Points", imageName: "Pinned", infos: []),
+        ],
+        [
+            LyricCollection(id: UUID(), title: "Favorites", subtitle: "MyFavorite", imageName: "iOS1", infos: []),
+            LyricCollection(id: UUID(), title: "Favorites", subtitle: "MyFavorite", imageName: "iOS2", infos: []),
+            LyricCollection(id: UUID(), title: "Favorites", subtitle: "MyFavorite", imageName: "iOS3", infos: []),
+        ],
+    ]
+    
+    fileprivate var collectionView: UICollectionView!
+    
     fileprivate lazy var searchController: UISearchController = { [unowned self] in
         $0.searchBar.placeholder = "Search lyric, place, song and more"
         $0.searchBar.searchTextField.clearButtonMode = .whileEditing
         $0.searchResultsUpdater = self
         return $0
     }(UISearchController(searchResultsController: nil))
-    
-    fileprivate lazy var tableView: UITableView = { [unowned self] in
-//        $0.delegate = self
-//        $0.dataSource = self
-        $0.separatorColor = .clear
-        $0.separatorStyle = .none
-        $0.rowHeight = UIDefine.cellHeight
-        $0.sectionHeaderTopPadding = CGFloat.leastNormalMagnitude
-        $0.sectionHeaderHeight = UIDefine.verticalMargin
-        $0.sectionFooterHeight = CGFloat.leastNormalMagnitude
-        $0.allowsMultipleSelection = true
-        $0.showsVerticalScrollIndicator = false
-        return $0
-    } (UITableView(frame: .zero, style: .insetGrouped))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,33 +37,54 @@ class BookmarkViewController: BaseViewController {
         setNavigationRightBar(items:
                                 [
                                     UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addCollection))])
-        
         navigationItem.searchController = searchController
+        
+        setupCollectionView()
     }
     
-    private func setupTableVC() {
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide)
-            make.left.equalToSuperview()
-            make.right.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
+    private func setupCollectionView() {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+        let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+
+        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(218))
+        
+        let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
+        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(50))
+        let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 10
+        
+        let layout = UICollectionViewCompositionalLayout(section: layoutSection, configuration: config)
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = .systemBackground
+        view.addSubview(collectionView)
+        
+        collectionView.register(LyricCollectionViewCell.self, forCellWithReuseIdentifier: LyricCollectionViewCell.reuseIdentifier)
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
+        collectionView.reloadData()
     }
     
     private func setNeedsReload() {
         guard let keyword = searchController.searchBar.text, keyword.count > 0 else {
-            tableView.reloadData()
             return
         }
         
-        tableView.reloadData()
     }
     
     // MARK: Actions
     
     @objc private func addCollection() {
-        present(CollectionViewController(), animated: true)
+        let containerViewController = AddCollectionViewController()
+        present(UINavigationController(rootViewController: containerViewController), animated: true)
     }
 }
 
@@ -71,4 +92,34 @@ extension BookmarkViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         setNeedsReload()
     }
+}
+
+extension BookmarkViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return lyricCollections[section].count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LyricCollectionViewCell.reuseIdentifier, for: indexPath) as! LyricCollectionViewCell
+        cell.configure(with: lyricCollections[indexPath.section][indexPath.row])
+        return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseIdentifier, for: indexPath) as! SectionHeader
+        if indexPath.section == 0 {
+            sectionHeader.title.text = "Pinned"
+        } else {
+            sectionHeader.title.text = "Collected"
+        }
+        
+        return sectionHeader
+    }
+}
+
+extension BookmarkViewController: UICollectionViewDelegate {
 }

@@ -33,6 +33,10 @@
 		4D1A6E0F2A1A79F7004ADCA1 /* featuredlyrics.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0E2A1A79F7004ADCA1 /* featuredlyrics.json */; };
 		4D1A6E152A1A7AE6004ADCA1 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1A6E142A1A7AE6004ADCA1 /* LookinServer */; };
 		4D1A6E172A1A81B2004ADCA1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */; };
+		4D1A6E192A1B17B4004ADCA1 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */; };
+		4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */; };
+		4D1A6E1D2A1B1BFA004ADCA1 /* ViewZoomHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */; };
+		4D1A6E1F2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */; };
 		4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571562A0D15A8004BBF62 /* MapViewController.swift */; };
 		4D4571592A0D16F9004BBF62 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */; };
 		4D45715B2A0D1763004BBF62 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */; };
@@ -75,6 +79,10 @@
 		4D1A6E0C2A1A778E004ADCA1 /* SectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionList.swift; sourceTree = "<group>"; };
 		4D1A6E0E2A1A79F7004ADCA1 /* featuredlyrics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = featuredlyrics.json; sourceTree = "<group>"; };
 		4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
+		4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButton.swift; sourceTree = "<group>"; };
+		4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewZoomHelper.swift; sourceTree = "<group>"; };
+		4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D4571562A0D15A8004BBF62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +174,9 @@
 				4D1A6DFE2A1A6F62004ADCA1 /* FeaturedCell.swift */,
 				4D1A6DFC2A1A6F57004ADCA1 /* SectionHeader.swift */,
 				4D1A6DD02A18FF6F004ADCA1 /* LyricMarkerView.swift */,
+				4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */,
+				4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */,
+				4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 				4D1A6DDF2A19CAA1004ADCA1 /* CollectionViewController.swift */,
 				4D1A6DE12A19DF80004ADCA1 /* WelcomeViewController.swift */,
 				4D1A6DF62A1A1863004ADCA1 /* NearbyPlacesViewController.swift */,
+				4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -291,6 +303,7 @@
 			files = (
 				4D1A6DFB2A1A1F93004ADCA1 /* LyricCollection.swift in Sources */,
 				4D45715B2A0D1763004BBF62 /* BookmarkViewController.swift in Sources */,
+				4D1A6E1F2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift in Sources */,
 				4D8803602A147B7600FB6368 /* LyricInfo.swift in Sources */,
 				4D1A6DE82A19E5CC004ADCA1 /* WelcomeManager.swift in Sources */,
 				4D1A6DFF2A1A6F62004ADCA1 /* FeaturedCell.swift in Sources */,
@@ -305,8 +318,10 @@
 				4D1A6DE02A19CAA1004ADCA1 /* CollectionViewController.swift in Sources */,
 				4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */,
 				4D1A6DEC2A19E68A004ADCA1 /* UIApplication+Extensions.swift in Sources */,
+				4D1A6E192A1B17B4004ADCA1 /* AddCollectionViewController.swift in Sources */,
 				4D1A6DE22A19DF80004ADCA1 /* WelcomeViewController.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
+				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,
 				4D1A6E032A1A6F72004ADCA1 /* SmallTableCell.swift in Sources */,
 				4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */,
 				4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */,
@@ -320,6 +335,7 @@
 				4D1A6E0D2A1A778E004ADCA1 /* SectionList.swift in Sources */,
 				4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */,
 				4D4571592A0D16F9004BBF62 /* DiscoverViewController.swift in Sources */,
+				4D1A6E1D2A1B1BFA004ADCA1 /* ViewZoomHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

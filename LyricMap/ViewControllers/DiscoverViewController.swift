@@ -19,7 +19,6 @@ class DiscoverViewController: BaseViewController {
         
         setNavigationTitle(title: "Discover")
 
-
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground

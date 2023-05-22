@@ -38,4 +38,17 @@ extension UIViewController {
         toolbarItems = [seperatorItem] + items +  [seperatorItem]
         navigationController?.isToolbarHidden = false
     }
+    
+    func setupDismissButton() {
+        let dismissButton = ZoomButton()
+        dismissButton.setImage(UIImage(systemName: "chevron.down")?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 20)).withRenderingMode(.alwaysOriginal), for: .normal)
+        dismissButton.addTarget(self, action: #selector(toggleDismiss), for: .touchUpInside)
+        setNavigationLeftBar(item: UIBarButtonItem(customView: dismissButton))
+    }
+    
+    // MARK: Actions
+    @objc private func toggleDismiss() {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        dismiss(animated: true, completion: nil)
+    }
 }

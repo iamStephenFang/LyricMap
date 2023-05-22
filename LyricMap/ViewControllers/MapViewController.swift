@@ -53,14 +53,7 @@ class MapViewController: BaseViewController {
         mapView.isRotateEnabled = false
         mapView.isPitchEnabled = false
         mapView.showsUserLocation = true
-        
         view.addSubview(mapView)
-        mapView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.left.equalToSuperview()
-            make.right.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-        }
         
         places.append(LyricPlace(lyricInfo: LyricInfo(songName: "弥敦道",
                                                       albumName: "Go!",

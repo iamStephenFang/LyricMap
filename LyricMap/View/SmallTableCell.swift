@@ -42,6 +42,6 @@ class SmallTableCell: UICollectionViewCell, SelfConfiguringCell {
     }
 
     required init?(coder: NSCoder) {
-        fatalError("How many times do I have to tell you? THIS. ISN'T. SUPPORTED.")
+        fatalError("init(coder:) has not been implemented")
     }
 }

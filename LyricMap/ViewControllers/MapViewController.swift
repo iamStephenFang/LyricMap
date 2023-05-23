@@ -22,7 +22,7 @@ class MapViewController: BaseViewController {
     fileprivate let locationManager = CLLocationManager()
     private let regionInMeters: Double = 10000
     
-    private var places: [LyricPlace] = []
+    private var infos: [LyricInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,6 @@ class MapViewController: BaseViewController {
     private func setupMapView() {
         mapView = MKMapView(frame: view.bounds)
         mapView.delegate = self
-        
         mapView.mapType = .standard
         mapView.showsBuildings = true
         mapView.showsTraffic = false
@@ -55,15 +54,9 @@ class MapViewController: BaseViewController {
         mapView.showsUserLocation = true
         view.addSubview(mapView)
         
-        places.append(LyricPlace(lyricInfo: LyricInfo(songName: "弥敦道",
-                                                      albumName: "Go!",
-                                                      albumImageUrl: "https://www.kkbox.com/hk/tc/album/GlnoJGUQs-18ALK203",
-                                                      artistName: "洪卓立",
-                                                      highlightedLyrics: [""],
-                                                      highlightedPosition: 1000),
-                                 locationName: "弥敦道",
-                                 coordinate: CLLocationCoordinate2D(latitude: 22.316200, longitude: 114.170233)))
-        mapView.addAnnotations(places)
+        infos.append(LyricInfo(songInfo: SongInfo(songName: "彌敦道", albumName: "Go!", albumImageUrl: "https://www.kkbox.com/hk/tc/album/GlnoJGUQs-18ALK203", artistName: "洪卓立"), content: "彌敦道", locationName: "彌敦道", coordinate: CLLocationCoordinate2D(latitude: 22.316200, longitude: 114.170233)))
+        mapView.addAnnotations(infos)
+        mapView.showAnnotations(infos, animated: true)
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -71,7 +64,7 @@ class MapViewController: BaseViewController {
     
     private func setupSidePanel() {
         let sidePanel = UIView()
-        sidePanel.backgroundColor = .systemGroupedBackground
+        sidePanel.backgroundColor = .secondarySystemBackground
         sidePanel.layer.cornerRadius = 8.0
         sidePanel.layer.masksToBounds = false
         sidePanel.layer.shadowOffset = CGSize(width: 0, height: 4)
@@ -96,7 +89,7 @@ class MapViewController: BaseViewController {
             make.height.equalTo(0.5)
         }
         
-        userLocationButton = UIButton()
+        userLocationButton = ZoomButton()
         userLocationButton.tintColor = UIColor(hexString: "5F8392")
         userLocationButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
         userLocationButton.addTarget(self, action: #selector(recenterUserLocation), for: .touchUpInside)
@@ -108,7 +101,7 @@ class MapViewController: BaseViewController {
             make.height.equalTo(UIDefine.buttonSize)
         }
         
-        nearbyButton = UIButton()
+        nearbyButton = ZoomButton()
         nearbyButton.tintColor = UIColor(hexString: "5F8392")
         nearbyButton.setImage(UIImage(systemName: "list.bullet"), for: .normal)
         nearbyButton.addTarget(self, action: #selector(presentNearbyPlaces), for: .touchUpInside)
@@ -170,43 +163,27 @@ class MapViewController: BaseViewController {
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let place = annotation as? LyricPlace else {
+        guard let annotation = annotation as? LyricInfo else {
             return nil
         }
         
-        var view: MKAnnotationView
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(
-            withIdentifier: "LyricMarkerView") as? MKMarkerAnnotationView {
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        } else {
-            view = LyricMarkerView(annotation: annotation, reuseIdentifier: "LyricMarkerView")
-            if let customAnnotationView = view as? LyricMarkerView {
-                let imageView = customAnnotationView.subviews.first as? UIImageView
-                imageView?.sd_setImage(with: URL(string: place.lyricInfo.albumImageUrl))
-            }
-            view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "LyricMarkerView")
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "LyricMarkerView")
+            annotationView?.canShowCallout = true
+            annotationView?.detailCalloutAccessoryView = LyricCalloutView(lyricInfo: annotation)
             
-            view.sd_setImage(with: URL(string: place.lyricInfo.albumImageUrl))
-        }
-        return view
-    }
-    
-    func mapView(
-        _ mapView: MKMapView,
-        annotationView view: MKAnnotationView,
-        calloutAccessoryControlTapped control: UIControl
-    ) {
-        guard let place = view.annotation as? LyricPlace else {
-            return
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+            imageView.image = UIImage(named: "彌敦道");
+            imageView.layer.cornerRadius = 5
+            imageView.layer.masksToBounds = true
+            annotationView?.addSubview(imageView)
+            annotationView?.frame = imageView.frame
+        } else {
+            annotationView?.annotation = annotation
         }
         
-        let launchOptions = [
-            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDefault
-        ]
-        place.mapItem?.openInMaps(launchOptions: launchOptions)
+        return annotationView
     }
 }
 

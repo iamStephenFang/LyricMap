@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LyricCollection: Decodable, Hashable {
+struct LyricCollection {
     let id: UUID
     let title: String
     let subtitle: String

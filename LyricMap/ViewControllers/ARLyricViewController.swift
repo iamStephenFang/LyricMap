@@ -18,12 +18,6 @@ class ARLyricViewController: BaseViewController {
         
         arView = ARView(frame: view.bounds)
         view.addSubview(arView)
-        arView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.left.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.right.equalToSuperview()
-        }
         
         updateLyric()
     }

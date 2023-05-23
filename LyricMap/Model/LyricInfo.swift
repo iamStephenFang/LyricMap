@@ -1,28 +1,50 @@
 //
-//  LyricInfo.swift
+//  LyricPlace.swift
 //  LyricMap
 //
 //  Created by StephenFang on 2023/5/17.
 //
 
-import Foundation
+import MapKit
+import Contacts
 
-struct LyricInfo: Decodable, Hashable {
-    // Name of the song
-    let songName: String
+class LyricInfo: NSObject, MKAnnotation {
+    // song info for this lyric
+    let songInfo: SongInfo
     
-    // Name of the song's album
-    let albumName: String
+    // lyric content
+    let content: String
     
-    // Link of the album's cover
-    let albumImageUrl: String
+    // position of the song
+    let position: TimeInterval = 0
     
-    // Name of the song's artist
-    let artistName: String
+    // locationName of the place
+    let locationName: String
     
-    // Highlighted lyrics of the song
-    let highlightedLyrics: [String]
+    // 2D Coordinate of the place
+    let coordinate: CLLocationCoordinate2D
     
-    // Highlighted position of the song
-    let highlightedPosition: TimeInterval
+    init(
+        songInfo: SongInfo,
+        content: String,
+        locationName: String,
+        coordinate: CLLocationCoordinate2D
+    ) {
+        self.songInfo = songInfo
+        self.locationName = locationName
+        self.coordinate = coordinate
+        self.content = content
+        
+        super.init()
+    }
+    
+    var mapItem: MKMapItem? {
+        let addressDict = [CNPostalAddressStreetKey: locationName]
+        let placemark = MKPlacemark(
+            coordinate: coordinate,
+            addressDictionary: addressDict)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = songInfo.songName
+        return mapItem
+    }
 }

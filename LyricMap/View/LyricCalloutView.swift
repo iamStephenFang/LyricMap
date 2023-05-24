@@ -185,7 +185,9 @@ class LyricCalloutView: UIView {
     }
     
     @objc private func didClickReality() {
-        self.window?.rootViewController?.present(ARLyricViewController(), animated: true)
+        let containerViewController = ARLyricViewController()
+        containerViewController.modalPresentationStyle = .fullScreen
+        self.window?.rootViewController?.present(containerViewController, animated: true)
     }
     
     @objc private func didClickMore() {

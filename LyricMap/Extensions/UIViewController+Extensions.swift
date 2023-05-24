@@ -41,7 +41,7 @@ extension UIViewController {
     
     func setupDismissButton() {
         let dismissButton = ZoomButton()
-        dismissButton.setImage(UIImage(systemName: "chevron.down")?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 20)).withRenderingMode(.alwaysOriginal), for: .normal)
+        dismissButton.setImage(UIImage(systemName: "chevron.down")?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 20)), for: .normal)
         dismissButton.addTarget(self, action: #selector(toggleDismiss), for: .touchUpInside)
         setNavigationLeftBar(item: UIBarButtonItem(customView: dismissButton))
     }

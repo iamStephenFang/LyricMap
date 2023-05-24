@@ -18,6 +18,9 @@ class DiscoverViewController: BaseViewController {
         super.viewDidLoad()
         
         setNavigationTitle(title: "Discover")
+        setNavigationRightBar(items:
+                                [
+                                    UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .plain, target: self, action: #selector(didToggleSetting))])
 
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -151,6 +154,13 @@ class DiscoverViewController: BaseViewController {
         let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(80))
         let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         return layoutSectionHeader
+    }
+    
+    // MARK: Actions
+    
+    @objc private func didToggleSetting() {
+        let containerViewController = SettingViewController()
+        present(UINavigationController(rootViewController: containerViewController), animated: true)
     }
 }
 

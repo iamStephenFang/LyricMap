@@ -81,6 +81,24 @@ extension UIImage {
         return nil
     }
     
+    // image with rounded corners
+    func imageWithRoundedCorners(radius: CGFloat? = nil) -> UIImage? {
+        let maxRadius = min(size.width, size.height) / 2
+        let cornerRadius: CGFloat
+        if let radius = radius, radius > 0 && radius <= maxRadius {
+            cornerRadius = radius
+        } else {
+            cornerRadius = maxRadius
+        }
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        let rect = CGRect(origin: .zero, size: size)
+        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+        draw(in: rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
     func gradientImageWithBounds(bounds: CGRect, colors: [CGColor]) -> UIImage {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
@@ -110,7 +128,7 @@ extension UIImage {
         cornerRadius: CGFloat = 0
     ) -> UIImage {
         let render = UIGraphicsImageRenderer(size: size)
-
+        
         return render.image { (context: UIGraphicsImageRendererContext) in
             // set clear fill
             context.cgContext.setFillColor(color.cgColor)

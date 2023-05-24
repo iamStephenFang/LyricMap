@@ -12,6 +12,8 @@ import RealityKit
 class ARLyricViewController: BaseViewController {
     
     fileprivate var arView: ARView!
+    fileprivate let shotButton = UIButton()
+    fileprivate let exitButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,11 @@ class ARLyricViewController: BaseViewController {
         view.addSubview(arView)
         
         updateLyric()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

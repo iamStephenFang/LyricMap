@@ -54,7 +54,11 @@ class MapViewController: BaseViewController {
         mapView.showsUserLocation = true
         view.addSubview(mapView)
         
-        infos.append(LyricInfo(songInfo: SongInfo(songName: "彌敦道", albumName: "Go!", albumImageUrl: "https://www.kkbox.com/hk/tc/album/GlnoJGUQs-18ALK203", artistName: "洪卓立"), content: "彌敦道", locationName: "彌敦道", coordinate: CLLocationCoordinate2D(latitude: 22.316200, longitude: 114.170233)))
+        infos = [
+            LyricInfo(songInfo: SongInfo(songName: "彌敦道", albumName: "Go!", albumImageUrl: "https://www.kkbox.com/hk/tc/album/GlnoJGUQs-18ALK203", artistName: "洪卓立"), content: "彌敦道", locationName: "彌敦道", coordinate: CLLocationCoordinate2D(latitude: 22.316200, longitude: 114.170233)),
+            LyricInfo(songInfo: SongInfo(songName: "中環", albumName: "阿田", albumImageUrl: "https://i.kfs.io/album/global/5654587,2v1/fit/500x500.jpg", artistName: "側田"), content: "任你為了他追隨 仍停滯到中區", locationName: "中環", coordinate: CLLocationCoordinate2D(latitude: 22.281507, longitude: 114.159111)),
+            LyricInfo(songInfo: SongInfo(songName: "皇后大道東", albumName: "羅大佑自選輯", albumImageUrl: "https://i.kfs.io/album/tw/33279,1v1/fit/500x500.jpg", artistName: "羅大佑"), content: "皇后大道東上為何無皇宫", locationName: "皇后大道", coordinate: CLLocationCoordinate2D(latitude: 22.276037, longitude: 114.170211))
+        ]
         mapView.addAnnotations(infos)
         mapView.showAnnotations(infos, animated: true)
         
@@ -118,7 +122,7 @@ class MapViewController: BaseViewController {
     
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
     }
@@ -174,7 +178,7 @@ extension MapViewController: MKMapViewDelegate {
             annotationView?.detailCalloutAccessoryView = LyricCalloutView(lyricInfo: annotation)
             
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-            imageView.image = UIImage(named: "彌敦道");
+            imageView.image = UIImage(named: annotation.songInfo.songName);
             imageView.layer.cornerRadius = 5
             imageView.layer.masksToBounds = true
             annotationView?.addSubview(imageView)

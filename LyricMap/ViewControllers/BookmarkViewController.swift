@@ -36,7 +36,8 @@ class BookmarkViewController: BaseViewController {
         setNavigationTitle(title: "Bookmark")
         setNavigationRightBar(items:
                                 [
-                                    UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addCollection))])
+                                    UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .plain, target: self, action: #selector(didToggleSetting)),
+                                    UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didToggleAdd))])
         navigationItem.searchController = searchController
         
         setupCollectionView()
@@ -82,8 +83,13 @@ class BookmarkViewController: BaseViewController {
     
     // MARK: Actions
     
-    @objc private func addCollection() {
+    @objc private func didToggleAdd() {
         let containerViewController = AddCollectionViewController()
+        present(UINavigationController(rootViewController: containerViewController), animated: true)
+    }
+    
+    @objc private func didToggleSetting() {
+        let containerViewController = SettingViewController()
         present(UINavigationController(rootViewController: containerViewController), animated: true)
     }
 }
@@ -122,4 +128,24 @@ extension BookmarkViewController: UICollectionViewDataSource {
 }
 
 extension BookmarkViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(CollectionViewController(), animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+        let helper = ViewZoomHelper()
+        helper.zoomOutWithView(view: cell)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+        let helper = ViewZoomHelper()
+        helper.zoomInWithView(view: cell)
+    }
 }

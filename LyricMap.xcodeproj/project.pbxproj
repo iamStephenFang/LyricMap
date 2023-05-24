@@ -38,6 +38,17 @@
 		4D1A6E1F2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */; };
 		4D1A6E222A1CAA30004ADCA1 /* SongInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E212A1CAA30004ADCA1 /* SongInfo.swift */; };
 		4D1A6E262A1CE3A8004ADCA1 /* LyricCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E252A1CE3A8004ADCA1 /* LyricCalloutView.swift */; };
+		4D1A6E282A1D3014004ADCA1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E272A1D3014004ADCA1 /* SettingViewController.swift */; };
+		4D1A6E522A1DBAC7004ADCA1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1A6E2F2A1DB00A004ADCA1 /* WidgetKit.framework */; };
+		4D1A6E532A1DBAC7004ADCA1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1A6E312A1DB00A004ADCA1 /* SwiftUI.framework */; };
+		4D1A6E562A1DBAC7004ADCA1 /* LyricMapWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E552A1DBAC7004ADCA1 /* LyricMapWidgetBundle.swift */; };
+		4D1A6E582A1DBAC7004ADCA1 /* LyricMapWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E572A1DBAC7004ADCA1 /* LyricMapWidgetLiveActivity.swift */; };
+		4D1A6E5A2A1DBAC7004ADCA1 /* LyricMapWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E592A1DBAC7004ADCA1 /* LyricMapWidget.swift */; };
+		4D1A6E5C2A1DBAC9004ADCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1A6E5B2A1DBAC9004ADCA1 /* Assets.xcassets */; };
+		4D1A6E602A1DBAC9004ADCA1 /* LyricMapWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4D1A6E512A1DBAC7004ADCA1 /* LyricMapWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4D1A6E642A1DBAEB004ADCA1 /* LyricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035D2A147B1800FB6368 /* LyricInfo.swift */; };
+		4D1A6E652A1DBAEE004ADCA1 /* SongInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E212A1CAA30004ADCA1 /* SongInfo.swift */; };
+		4D1A6E6C2A1DD0EC004ADCA1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */; };
 		4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571562A0D15A8004BBF62 /* MapViewController.swift */; };
 		4D4571592A0D16F9004BBF62 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */; };
 		4D45715B2A0D1763004BBF62 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */; };
@@ -52,6 +63,30 @@
 		4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */; };
 		4D88035E2A147B1800FB6368 /* LyricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035D2A147B1800FB6368 /* LyricInfo.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D1A6E5E2A1DBAC9004ADCA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D56EAE22A0BBDF400BD615C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D1A6E502A1DBAC7004ADCA1;
+			remoteInfo = LyricMapWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D1A6E462A1DB00F004ADCA1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4D1A6E602A1DBAC9004ADCA1 /* LyricMapWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D1A6DDD2A19C3FA004ADCA1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -83,6 +118,15 @@
 		4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1A6E212A1CAA30004ADCA1 /* SongInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInfo.swift; sourceTree = "<group>"; };
 		4D1A6E252A1CE3A8004ADCA1 /* LyricCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCalloutView.swift; sourceTree = "<group>"; };
+		4D1A6E272A1D3014004ADCA1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4D1A6E2F2A1DB00A004ADCA1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4D1A6E312A1DB00A004ADCA1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4D1A6E512A1DBAC7004ADCA1 /* LyricMapWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LyricMapWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1A6E552A1DBAC7004ADCA1 /* LyricMapWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricMapWidgetBundle.swift; sourceTree = "<group>"; };
+		4D1A6E572A1DBAC7004ADCA1 /* LyricMapWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricMapWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		4D1A6E592A1DBAC7004ADCA1 /* LyricMapWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricMapWidget.swift; sourceTree = "<group>"; };
+		4D1A6E5B2A1DBAC9004ADCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D1A6E5D2A1DBAC9004ADCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D4571562A0D15A8004BBF62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +144,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D1A6E4E2A1DBAC7004ADCA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1A6E532A1DBAC7004ADCA1 /* SwiftUI.framework in Frameworks */,
+				4D1A6E522A1DBAC7004ADCA1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D56EAE72A0BBDF400BD615C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +168,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1A6E2E2A1DB00A004ADCA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D1A6E2F2A1DB00A004ADCA1 /* WidgetKit.framework */,
+				4D1A6E312A1DB00A004ADCA1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D1A6E542A1DBAC7004ADCA1 /* LyricMapWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4D1A6E552A1DBAC7004ADCA1 /* LyricMapWidgetBundle.swift */,
+				4D1A6E572A1DBAC7004ADCA1 /* LyricMapWidgetLiveActivity.swift */,
+				4D1A6E592A1DBAC7004ADCA1 /* LyricMapWidget.swift */,
+				4D1A6E5B2A1DBAC9004ADCA1 /* Assets.xcassets */,
+				4D1A6E5D2A1DBAC9004ADCA1 /* Info.plist */,
+			);
+			path = LyricMapWidget;
+			sourceTree = "<group>";
+		};
 		4D45715E2A0DF3FA004BBF62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				4D56EAEC2A0BBDF400BD615C /* LyricMap */,
+				4D1A6E542A1DBAC7004ADCA1 /* LyricMapWidget */,
+				4D1A6E2E2A1DB00A004ADCA1 /* Frameworks */,
 				4D56EAEB2A0BBDF400BD615C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				4D56EAEA2A0BBDF400BD615C /* LyricMap.app */,
+				4D1A6E512A1DBAC7004ADCA1 /* LyricMapWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +283,7 @@
 				4D1A6DE12A19DF80004ADCA1 /* WelcomeViewController.swift */,
 				4D1A6DF62A1A1863004ADCA1 /* NearbyPlacesViewController.swift */,
 				4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */,
+				4D1A6E272A1D3014004ADCA1 /* SettingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -213,6 +291,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4D1A6E502A1DBAC7004ADCA1 /* LyricMapWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D1A6E612A1DBAC9004ADCA1 /* Build configuration list for PBXNativeTarget "LyricMapWidgetExtension" */;
+			buildPhases = (
+				4D1A6E4D2A1DBAC7004ADCA1 /* Sources */,
+				4D1A6E4E2A1DBAC7004ADCA1 /* Frameworks */,
+				4D1A6E4F2A1DBAC7004ADCA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyricMapWidgetExtension;
+			productName = LyricMapWidgetExtension;
+			productReference = 4D1A6E512A1DBAC7004ADCA1 /* LyricMapWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4D56EAE92A0BBDF400BD615C /* LyricMap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D56EAFE2A0BBDF600BD615C /* Build configuration list for PBXNativeTarget "LyricMap" */;
@@ -220,10 +315,12 @@
 				4D56EAE62A0BBDF400BD615C /* Sources */,
 				4D56EAE72A0BBDF400BD615C /* Frameworks */,
 				4D56EAE82A0BBDF400BD615C /* Resources */,
+				4D1A6E462A1DB00F004ADCA1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4D1A6E5F2A1DBAC9004ADCA1 /* PBXTargetDependency */,
 			);
 			name = LyricMap;
 			packageProductDependencies = (
@@ -247,6 +344,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					4D1A6E502A1DBAC7004ADCA1 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					4D56EAE92A0BBDF400BD615C = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -274,11 +374,20 @@
 			projectRoot = "";
 			targets = (
 				4D56EAE92A0BBDF400BD615C /* LyricMap */,
+				4D1A6E502A1DBAC7004ADCA1 /* LyricMapWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D1A6E4F2A1DBAC7004ADCA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1A6E5C2A1DBAC9004ADCA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D56EAE82A0BBDF400BD615C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +402,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D1A6E4D2A1DBAC7004ADCA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1A6E582A1DBAC7004ADCA1 /* LyricMapWidgetLiveActivity.swift in Sources */,
+				4D1A6E642A1DBAEB004ADCA1 /* LyricInfo.swift in Sources */,
+				4D1A6E562A1DBAC7004ADCA1 /* LyricMapWidgetBundle.swift in Sources */,
+				4D1A6E6C2A1DD0EC004ADCA1 /* UIImage+Extensions.swift in Sources */,
+				4D1A6E652A1DBAEE004ADCA1 /* SongInfo.swift in Sources */,
+				4D1A6E5A2A1DBAC7004ADCA1 /* LyricMapWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D56EAE62A0BBDF400BD615C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +442,7 @@
 				4D1A6E032A1A6F72004ADCA1 /* SmallTableCell.swift in Sources */,
 				4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */,
 				4D1A6E222A1CAA30004ADCA1 /* SongInfo.swift in Sources */,
+				4D1A6E282A1D3014004ADCA1 /* SettingViewController.swift in Sources */,
 				4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */,
 				4D1A6E072A1A7009004ADCA1 /* SelfConfiguringCell.swift in Sources */,
 				4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */,
@@ -336,6 +459,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D1A6E5F2A1DBAC9004ADCA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D1A6E502A1DBAC7004ADCA1 /* LyricMapWidgetExtension */;
+			targetProxy = 4D1A6E5E2A1DBAC9004ADCA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D1A6DF32A1A0584004ADCA1 /* Localizable.strings */ = {
@@ -359,6 +490,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4D1A6E622A1DBAC9004ADCA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9ND6HRPEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LyricMapWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LyricMapWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.stephenfang.LyricMap.LyricMapWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D1A6E632A1DBAC9004ADCA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9ND6HRPEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LyricMapWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LyricMapWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.stephenfang.LyricMap.LyricMapWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4D56EAFC2A0BBDF600BD615C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -478,6 +663,7 @@
 		4D56EAFF2A0BBDF600BD615C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +693,7 @@
 		4D56EB002A0BBDF600BD615C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +723,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D1A6E612A1DBAC9004ADCA1 /* Build configuration list for PBXNativeTarget "LyricMapWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D1A6E622A1DBAC9004ADCA1 /* Debug */,
+				4D1A6E632A1DBAC9004ADCA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4D56EAE52A0BBDF400BD615C /* Build configuration list for PBXProject "LyricMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

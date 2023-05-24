@@ -8,5 +8,9 @@
 import Foundation
 
 class CollectionViewController: BaseViewController {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setNavigationTitle(title: "Collection")
+        navigationItem.largeTitleDisplayMode = .never
+    }
 }

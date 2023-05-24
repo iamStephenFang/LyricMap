@@ -17,10 +17,10 @@ class LyricCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         titleLabel.textColor = .label
         
-        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         subtitleLabel.textColor = .secondaryLabel
 
         imageView.layer.cornerRadius = 5

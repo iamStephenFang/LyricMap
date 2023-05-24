@@ -59,7 +59,7 @@ class BookmarkViewController: BaseViewController {
         
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 10
-        
+    
         let layout = UICollectionViewCompositionalLayout(section: layoutSection, configuration: config)
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)

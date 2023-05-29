@@ -1,18 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "Heading4@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Heading4@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "Slide 18.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

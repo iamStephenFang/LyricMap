@@ -37,7 +37,6 @@ class LyricCalloutView: UIView {
     }
     
     private func setupView() {
-        albumButton.setImage(UIImage(named: lyricInfo.songInfo.songName), for: .normal)
         albumButton.layer.cornerRadius = 5
         albumButton.contentMode = .scaleAspectFill
         albumButton.clipsToBounds = true
@@ -48,6 +47,7 @@ class LyricCalloutView: UIView {
             make.top.equalToSuperview()
             make.left.equalToSuperview()
         }
+        albumButton.sd_setImage(with: URL(string: lyricInfo.songInfo.albumImageUrl), for: .normal, placeholderImage: UIImage(named: "PlaceHolder"))
         
         songLabel.text = lyricInfo.songInfo.songName
         songLabel.textColor = .label
@@ -76,12 +76,12 @@ class LyricCalloutView: UIView {
         lyricLabel.textColor = .tertiaryLabel
         lyricLabel.font = .preferredFont(forTextStyle: .body)
         lyricLabel.translatesAutoresizingMaskIntoConstraints = false
-        lyricLabel.numberOfLines = 0
+        lyricLabel.numberOfLines = 2
         addSubview(lyricLabel)
         lyricLabel.snp.makeConstraints { make in
             make.top.equalTo(artistLabel.snp.bottom).offset(8)
             make.left.equalTo(albumButton.snp.right).offset(16)
-            make.height.equalTo(20)
+            make.height.equalTo(40)
             make.right.equalToSuperview()
         }
         

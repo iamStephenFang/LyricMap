@@ -7,16 +7,16 @@
 		"items": [
 			{
 				"id": 1,
-				"tagline": "赤柱",
-				"name": "老派約會之必要",
-				"subheading": "怎知道霎眼 就談到 赤柱了",
-				"image": "赤柱",
+				"tagline": "FEATURED",
+				"name": "歌詞里的香港 - 灣仔篇",
+				"subheading": "12 首歌曲 | 46 分鐘 4 秒",
+				"image": "Heading1",
 			},
 			{
 				"id": 2,
-				"tagline": "See it in dark mode",
-				"name": "Smartwhirl",
-				"subheading": "People who love whirling just like you!",
+				"tagline": "FEATURED",
+				"name": "歌詞里的香港 — 中西區篇",
+				"subheading": "14 首歌曲 | 52 分鐘 20 秒",
 				"image": "Heading2",
 			},
 			{

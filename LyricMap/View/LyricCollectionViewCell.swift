@@ -24,6 +24,7 @@ class LyricCollectionViewCell: UICollectionViewCell {
         subtitleLabel.textColor = .secondaryLabel
 
         imageView.layer.cornerRadius = 5
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
 
         let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel, subtitleLabel])
@@ -45,7 +46,7 @@ class LyricCollectionViewCell: UICollectionViewCell {
     func configure(with collection: LyricCollection) {
         titleLabel.text = collection.title
         subtitleLabel.text = collection.subtitle
-        imageView.image = UIImage(named: collection.imageName)
+        imageView.image = UIImage(named: collection.imageName)?.imageWithRoundedCorners(radius: 5)
     }
     
     required init?(coder: NSCoder) {

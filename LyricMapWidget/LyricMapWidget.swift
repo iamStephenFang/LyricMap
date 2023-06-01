@@ -13,11 +13,7 @@ struct Provider: TimelineProvider {
     fileprivate let locationManager = CLLocationManager()
     private let regionInMeters: Double = 12000
     
-    private var infos = [
-        LyricInfo(songInfo: SongInfo(songName: "彌敦道", albumName: "Go!", albumImageUrl: "https://www.kkbox.com/hk/tc/album/GlnoJGUQs-18ALK203", artistName: "洪卓立"), content: "彌敦道", locationName: "彌敦道", coordinate: CLLocationCoordinate2D(latitude: 22.316200, longitude: 114.170233)),
-        LyricInfo(songInfo: SongInfo(songName: "中環", albumName: "阿田", albumImageUrl: "https://i.kfs.io/album/global/5654587,2v1/fit/500x500.jpg", artistName: "側田"), content: "任你為了他追隨 仍停滯到中區", locationName: "中環", coordinate: CLLocationCoordinate2D(latitude: 22.281507, longitude: 114.159111)),
-        LyricInfo(songInfo: SongInfo(songName: "皇后大道東", albumName: "羅大佑自選輯", albumImageUrl: "https://i.kfs.io/album/tw/33279,1v1/fit/500x500.jpg", artistName: "羅大佑"), content: "皇后大道東上為何無皇宫", locationName: "皇后大道", coordinate: CLLocationCoordinate2D(latitude: 22.276037, longitude: 114.170211))
-    ]
+    private var infos = LyricInfoManager.infos
     
     func placeholder(in context: Context) -> MapEntry {
         MapEntry(date: Date(), image: UIImage(systemName: "location")!)

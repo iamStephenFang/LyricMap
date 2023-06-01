@@ -53,6 +53,9 @@
 		4D4571592A0D16F9004BBF62 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */; };
 		4D45715B2A0D1763004BBF62 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* LibraryViewController.swift */; };
 		4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */; };
+		4D5415FD2A288A7100B8AB8A /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */; };
+		4D5415FF2A28917100B8AB8A /* LyricInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */; };
+		4D5416002A28930B00B8AB8A /* LyricInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */; };
 		4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */; };
 		4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */; };
 		4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAF12A0BBDF400BD615C /* TabViewController.swift */; };
@@ -131,6 +134,8 @@
 		4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		4D45715A2A0D1763004BBF62 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfoManager.swift; sourceTree = "<group>"; };
 		4D56EAEA2A0BBDF400BD615C /* LyricMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +241,7 @@
 				4D56EAF62A0BBDF600BD615C /* Assets.xcassets */,
 				4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */,
 				4D56EAFB2A0BBDF600BD615C /* Info.plist */,
+				4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */,
 			);
 			path = LyricMap;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 				4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */,
 				4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */,
 				4D1A6E252A1CE3A8004ADCA1 /* LyricCalloutView.swift */,
+				4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1A6E582A1DBAC7004ADCA1 /* LyricMapWidgetLiveActivity.swift in Sources */,
+				4D5416002A28930B00B8AB8A /* LyricInfoManager.swift in Sources */,
 				4D1A6E642A1DBAEB004ADCA1 /* LyricInfo.swift in Sources */,
 				4D1A6E562A1DBAC7004ADCA1 /* LyricMapWidgetBundle.swift in Sources */,
 				4D1A6E6C2A1DD0EC004ADCA1 /* UIImage+Extensions.swift in Sources */,
@@ -428,6 +436,7 @@
 				4D1A6DDE2A19C3FA004ADCA1 /* UIViewController+Extensions.swift in Sources */,
 				4D1A6DE62A19E483004ADCA1 /* Bundle+Extensions.swift in Sources */,
 				4D88035E2A147B1800FB6368 /* LyricInfo.swift in Sources */,
+				4D5415FF2A28917100B8AB8A /* LyricInfoManager.swift in Sources */,
 				4D1A6DE42A19E227004ADCA1 /* FeatureInfo.swift in Sources */,
 				4D1A6DF72A1A1863004ADCA1 /* NearbyPlacesViewController.swift in Sources */,
 				4D1A6E0B2A1A74CE004ADCA1 /* Section.swift in Sources */,
@@ -437,6 +446,7 @@
 				4D1A6DEC2A19E68A004ADCA1 /* UIApplication+Extensions.swift in Sources */,
 				4D1A6E192A1B17B4004ADCA1 /* AddCollectionViewController.swift in Sources */,
 				4D1A6DE22A19DF80004ADCA1 /* WelcomeViewController.swift in Sources */,
+				4D5415FD2A288A7100B8AB8A /* DetailCollectionViewCell.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,
 				4D1A6E032A1A6F72004ADCA1 /* SmallTableCell.swift in Sources */,

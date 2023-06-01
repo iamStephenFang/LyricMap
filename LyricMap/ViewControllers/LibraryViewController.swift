@@ -82,7 +82,6 @@ class LibraryViewController: BaseViewController {
     }
     
     // MARK: Actions
-    
     @objc private func didToggleAdd() {
         let containerViewController = AddCollectionViewController()
         present(UINavigationController(rootViewController: containerViewController), animated: true)

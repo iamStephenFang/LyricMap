@@ -15,10 +15,6 @@ class AddCollectionViewController: BaseViewController {
     let descField = UITextField()
     let imageView = UIImageView()
     
-    private var selectedAssetIdentifiers = [String]()
-    private var selectedAssetIdentifierIterator: IndexingIterator<[String]>?
-    private var selection = [String: PHPickerResult]()
-    
     static let iconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 50))
     
     override func viewDidLoad() {
@@ -28,7 +24,8 @@ class AddCollectionViewController: BaseViewController {
         setNavigationRightBar(item: UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveCollection)))
         setupDismissButton()
         
-        imageView.image = UIImage(named: "PlaceHolder")
+        imageView.backgroundColor = .systemGroupedBackground
+        imageView.layer.cornerRadius = 10
         view.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
@@ -48,6 +45,7 @@ class AddCollectionViewController: BaseViewController {
         textField.placeholder = "Collection Name"
         textField.textAlignment = .center
         textField.becomeFirstResponder()
+        textField.font = .preferredFont(forTextStyle: .title1)
         view.addSubview(textField)
         textField.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(16)
@@ -58,6 +56,7 @@ class AddCollectionViewController: BaseViewController {
         
         descField.placeholder = "Description"
         descField.textAlignment = .center
+        descField.font = .preferredFont(forTextStyle: .body)
         view.addSubview(descField)
         descField.snp.makeConstraints { make in
             make.top.equalTo(textField.snp.bottom).offset(16)
@@ -72,8 +71,7 @@ class AddCollectionViewController: BaseViewController {
         configuration.filter = PHPickerFilter.any(of: [.images])
         configuration.preferredAssetRepresentationMode = .current
         configuration.selection = .ordered
-        configuration.selectionLimit = 3
-        configuration.preselectedAssetIdentifiers = self.selectedAssetIdentifiers
+        configuration.selectionLimit = 1
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
         present(picker, animated: true)
@@ -88,15 +86,17 @@ extension AddCollectionViewController : PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
         
-        let existingSelection = self.selection
-        var newSelection = [String: PHPickerResult]()
-        for result in results {
-            let identifier = result.assetIdentifier!
-            newSelection[identifier] = existingSelection[identifier] ?? result
-        }
-        
-        selection = newSelection
-        selectedAssetIdentifiers = results.map(\.assetIdentifier!)
-        selectedAssetIdentifierIterator = selectedAssetIdentifiers.makeIterator()
+        let itemProviders = results.map(\.itemProvider)
+           for item in itemProviders {
+               if item.canLoadObject(ofClass: UIImage.self) {
+                   item.loadObject(ofClass: UIImage.self) { (image, error) in
+                       DispatchQueue.main.async {
+                           if let image = image as? UIImage {
+                               self.imageView.image = image
+                           }
+                       }
+                   }
+               }
+           }
     }
 }

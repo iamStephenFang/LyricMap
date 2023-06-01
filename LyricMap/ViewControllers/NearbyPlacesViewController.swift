@@ -18,6 +18,7 @@ class NearbyPlacesViewController: UIViewController {
         super.viewDidLoad()
         
         lyricInfos = LyricInfoManager.infos
+        
         setupBlurView()
         setupCollectionView()
     }
@@ -37,7 +38,7 @@ class NearbyPlacesViewController: UIViewController {
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
         layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 8, bottom: 0, trailing: 8)
 
-        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .estimated(400))
+        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(400))
         let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])
 
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)

@@ -29,9 +29,9 @@ class DiscoverViewController: BaseViewController {
         view.addSubview(collectionView)
 
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
-        collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: FeaturedCell.reuseIdentifier)
-        collectionView.register(MediumTableCell.self, forCellWithReuseIdentifier: MediumTableCell.reuseIdentifier)
-        collectionView.register(SmallTableCell.self, forCellWithReuseIdentifier: SmallTableCell.reuseIdentifier)
+        collectionView.register(FeaturedTableViewCell.self, forCellWithReuseIdentifier: FeaturedTableViewCell.reuseIdentifier)
+        collectionView.register(SongTableViewCell.self, forCellWithReuseIdentifier: SongTableViewCell.reuseIdentifier)
+        collectionView.register(PlaylistTableViewCell.self, forCellWithReuseIdentifier: PlaylistTableViewCell.reuseIdentifier)
 
         createDataSource()
         reloadData()
@@ -49,12 +49,12 @@ class DiscoverViewController: BaseViewController {
     func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, SectionItem>(collectionView: collectionView) { collectionView, indexPath, app in
             switch self.sections[indexPath.section].type {
-            case "mediumTable":
-                return self.configure(MediumTableCell.self, with: app, for: indexPath)
-            case "smallTable":
-                return self.configure(SmallTableCell.self, with: app, for: indexPath)
+            case "playlist":
+                return self.configure(SongTableViewCell.self, with: app, for: indexPath)
+            case "collections":
+                return self.configure(PlaylistTableViewCell.self, with: app, for: indexPath)
             default:
-                return self.configure(FeaturedCell.self, with: app, for: indexPath)
+                return self.configure(FeaturedTableViewCell.self, with: app, for: indexPath)
             }
         }
 
@@ -89,9 +89,9 @@ class DiscoverViewController: BaseViewController {
             let section = self.sections[sectionIndex]
 
             switch section.type {
-            case "mediumTable":
+            case "playlist":
                 return self.createMediumTableSection(using: section)
-            case "smallTable":
+            case "collections":
                 return self.createSmallTableSection(using: section)
             default:
                 return self.createFeaturedSection(using: section)

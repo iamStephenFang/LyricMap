@@ -1,5 +1,5 @@
 //
-//  SmallTableCell.swift
+//  PlaylistTableViewCell.swift
 //  TapStore
 //
 //  Created by Paul Hudson on 01/10/2019.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-class SmallTableCell: UICollectionViewCell, SelfConfiguringCell {
-    static let reuseIdentifier: String = "SmallTableCell"
+class PlaylistTableViewCell: UICollectionViewCell, SelfConfiguringCell {
+    static let reuseIdentifier: String = "PlaylistTableViewCell"
 
+    let rankLabel = UILabel()
     let name = UILabel()
-    let imageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        rankLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        rankLabel.textColor = .tintColor
+        
         name.font = UIFont.preferredFont(forTextStyle: .title2)
         name.textColor = .label
 
-        imageView.layer.cornerRadius = 5
-        imageView.clipsToBounds = true
-
-        let stackView = UIStackView(arrangedSubviews: [imageView, name])
+        let stackView = UIStackView(arrangedSubviews: [rankLabel, name])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
         stackView.spacing = 20
@@ -38,7 +38,7 @@ class SmallTableCell: UICollectionViewCell, SelfConfiguringCell {
 
     func configure(with item: SectionItem) {
         name.text = item.name
-        imageView.image = UIImage(named: item.image)
+        rankLabel.text = item.tagline
     }
 
     required init?(coder: NSCoder) {

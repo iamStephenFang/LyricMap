@@ -1,5 +1,5 @@
 //
-//  FeaturedCell.swift
+//  FeaturedTableViewCell.swift
 //  TapStore
 //
 //  Created by Paul Hudson on 01/10/2019.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FeaturedCell: UICollectionViewCell, SelfConfiguringCell {
-    static let reuseIdentifier: String = "FeaturedCell"
+class FeaturedTableViewCell: UICollectionViewCell, SelfConfiguringCell {
+    static let reuseIdentifier: String = "FeaturedTableViewCell"
 
     let tagline = UILabel()
     let name = UILabel()
@@ -46,15 +46,15 @@ class FeaturedCell: UICollectionViewCell, SelfConfiguringCell {
 
         stackView.setCustomSpacing(10, after: subtitle)
     }
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func configure(with item: SectionItem) {
         tagline.text = item.tagline.uppercased()
         name.text = item.name
         subtitle.text = item.subheading
-        imageView.image = UIImage(named: item.image)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("Not happening")
+        imageView.sd_setImage(with: URL(string: item.imageUrl), placeholderImage: UIImage(named: "PlaceHolder"))
     }
 }

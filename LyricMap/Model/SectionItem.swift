@@ -12,5 +12,5 @@ struct SectionItem: Decodable, Hashable {
     let tagline: String
     let name: String
     let subheading: String
-    let image: String
+    let imageUrl: String
 }

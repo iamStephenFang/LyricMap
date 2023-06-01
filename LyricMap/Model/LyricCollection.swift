@@ -7,8 +7,14 @@
 
 import Foundation
 
+enum CollectionType {
+    case pinned
+    case custom
+}
+
 struct LyricCollection {
-    let id: UUID
+    let id: Int
+    let type: CollectionType
     let title: String
     let subtitle: String
     let imageName: String

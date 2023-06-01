@@ -11,13 +11,13 @@ class LibraryViewController: BaseViewController {
     
     var lyricCollections = [
         [
-            LyricCollection(id: UUID(), title: "Favorites", subtitle: "My Favorite", imageName: "Favorite", infos: []),
-            LyricCollection(id: UUID(), title: "Visited", subtitle: "Visited Points", imageName: "Pinned", infos: []),
+            LyricCollection(id: 0, type: .pinned, title: "Favorites", subtitle: "My Favorite", imageName: "Favorite", infos: []),
+            LyricCollection(id: 1, type: .pinned, title: "Visited", subtitle: "Visited Points", imageName: "Pinned", infos: []),
         ],
         [
-            LyricCollection(id: UUID(), title: "Favorites", subtitle: "MyFavorite", imageName: "iOS1", infos: []),
-            LyricCollection(id: UUID(), title: "Favorites", subtitle: "MyFavorite", imageName: "iOS2", infos: []),
-            LyricCollection(id: UUID(), title: "Favorites", subtitle: "MyFavorite", imageName: "iOS3", infos: []),
+            LyricCollection(id: 2, type: .custom, title: "Favorites", subtitle: "MyFavorite", imageName: "iOS1", infos: []),
+            LyricCollection(id: 3, type: .custom, title: "Favorites", subtitle: "MyFavorite", imageName: "iOS2", infos: []),
+            LyricCollection(id: 4, type: .custom, title: "Favorites", subtitle: "MyFavorite", imageName: "iOS3", infos: []),
         ],
     ]
     

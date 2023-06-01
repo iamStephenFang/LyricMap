@@ -1,5 +1,5 @@
 //
-//  MediumTableCell.swift
+//  SongTableViewCell.swift
 //  TapStore
 //
 //  Created by Paul Hudson on 01/10/2019.
@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 
-class MediumTableCell: UICollectionViewCell, SelfConfiguringCell {
+class SongTableViewCell: UICollectionViewCell, SelfConfiguringCell {
     
-    static let reuseIdentifier: String = "MediumTableCell"
+    static let reuseIdentifier: String = "SongTableViewCell"
     static let iconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 25, weight: .light))
     
     let name = UILabel()
@@ -31,10 +32,10 @@ class MediumTableCell: UICollectionViewCell, SelfConfiguringCell {
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
 
-        playButton.setImage(UIImage(systemName: "play.circle")?.withConfiguration(MediumTableCell.iconConfig), for: .normal)
+        playButton.setImage(UIImage(systemName: "play.circle")?.withConfiguration(SongTableViewCell.iconConfig), for: .normal)
         playButton.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 
-        infoButton.setImage(UIImage(systemName: "info.circle")?.withConfiguration(MediumTableCell.iconConfig), for: .normal)
+        infoButton.setImage(UIImage(systemName: "info.circle")?.withConfiguration(SongTableViewCell.iconConfig), for: .normal)
         infoButton.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         
         imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
@@ -62,6 +63,7 @@ class MediumTableCell: UICollectionViewCell, SelfConfiguringCell {
     func configure(with item: SectionItem) {
         name.text = item.name
         subtitle.text = item.subheading
-        imageView.image = UIImage(named: item.image)?.imageWithSize(size: CGSize(width:62, height: 62))
+        let transformer = SDImageResizingTransformer(size: CGSize(width: 62, height: 62), scaleMode: .aspectFill)
+        imageView.sd_setImage(with: URL(string: item.imageUrl), placeholderImage: UIImage(named: "PlaceHolder"), context: [.imageTransformer: transformer])
     }
 }

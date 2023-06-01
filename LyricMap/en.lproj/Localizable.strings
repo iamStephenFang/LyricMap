@@ -10,3 +10,7 @@
 "welcome_collection_title" = "Collections";
 "welcome_privacy_subtitle" = "No registration required, instant access, no user privacy information is recorded";
 "welcome_privacy_title" = "Privacy";
+"discover_title" = "Discover";
+"library_collected_title" = "Collected";
+"library_pinned_title" = "Pinned";
+"library_title" = "Library";

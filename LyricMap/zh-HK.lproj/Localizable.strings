@@ -10,3 +10,7 @@
 "welcome_collection_title" = "收藏夾";
 "welcome_privacy_subtitle" = "無需註冊，立即使用，用戶私隱信息不會被記錄";
 "welcome_privacy_title" = "私隱";
+"discover_title" = "發現";
+"library_collected_title" = "個人收藏";
+"library_pinned_title" = "置頂";
+"library_title" = "收藏";

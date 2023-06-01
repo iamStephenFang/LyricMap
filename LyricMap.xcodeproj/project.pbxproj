@@ -51,7 +51,7 @@
 		4D1A6E6C2A1DD0EC004ADCA1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */; };
 		4D4571572A0D15A8004BBF62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571562A0D15A8004BBF62 /* MapViewController.swift */; };
 		4D4571592A0D16F9004BBF62 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */; };
-		4D45715B2A0D1763004BBF62 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */; };
+		4D45715B2A0D1763004BBF62 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715A2A0D1763004BBF62 /* LibraryViewController.swift */; };
 		4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */; };
 		4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */; };
 		4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */; };
@@ -129,7 +129,7 @@
 		4D1A6E5D2A1DBAC9004ADCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D4571562A0D15A8004BBF62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		4D45715A2A0D1763004BBF62 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4D56EAEA2A0BBDF400BD615C /* LyricMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 				4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */,
 				4D56EAF12A0BBDF400BD615C /* TabViewController.swift */,
 				4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */,
-				4D45715A2A0D1763004BBF62 /* BookmarkViewController.swift */,
+				4D45715A2A0D1763004BBF62 /* LibraryViewController.swift */,
 				4D4571582A0D16F9004BBF62 /* DiscoverViewController.swift */,
 				4D4571562A0D15A8004BBF62 /* MapViewController.swift */,
 				4D1A6DDF2A19CAA1004ADCA1 /* CollectionViewController.swift */,
@@ -420,7 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1A6DFB2A1A1F93004ADCA1 /* LyricCollection.swift in Sources */,
-				4D45715B2A0D1763004BBF62 /* BookmarkViewController.swift in Sources */,
+				4D45715B2A0D1763004BBF62 /* LibraryViewController.swift in Sources */,
 				4D1A6E1F2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift in Sources */,
 				4D1A6DE82A19E5CC004ADCA1 /* WelcomeManager.swift in Sources */,
 				4D1A6DFF2A1A6F62004ADCA1 /* FeaturedCell.swift in Sources */,

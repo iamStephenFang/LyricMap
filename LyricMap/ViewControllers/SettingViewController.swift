@@ -14,6 +14,5 @@ class SettingViewController: BaseViewController {
         
         setNavigationTitle(title: "Setting")
         setupDismissButton()
-        navigationItem.largeTitleDisplayMode = .never
     }
 }

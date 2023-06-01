@@ -27,8 +27,6 @@ class MapViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setNavigationTitle(title: "LyricMap")
 
         setupMapView()
         setupSidePanel()

@@ -19,7 +19,5 @@ class BaseViewController: UIViewController {
         tabBarAppearance.configureWithDefaultBackground()
         tabBarController?.tabBar.standardAppearance = tabBarAppearance
         tabBarController?.tabBar.scrollEdgeAppearance = tabBarAppearance
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

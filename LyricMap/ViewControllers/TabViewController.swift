@@ -20,7 +20,7 @@ class TabViewController: UITabBarController {
         viewControllers = [
             createNavController(for: DiscoverViewController(),tag: 1,  image: UIImage(systemName: "safari")!, selectedImage: UIImage(systemName: "safari.fill")!),
             createNavController(for: MapViewController(), tag: 0,  image: UIImage(systemName: "map")!, selectedImage: UIImage(systemName: "map.fill")!),
-            createNavController(for: BookmarkViewController(), tag: 2,  image: UIImage(systemName: "bookmark")!, selectedImage: UIImage(systemName: "bookmark.fill")!),
+            createNavController(for: LibraryViewController(), tag: 2,  image: UIImage(systemName: "bookmark")!, selectedImage: UIImage(systemName: "bookmark.fill")!),
         ]
     }
     

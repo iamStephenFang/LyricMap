@@ -1,5 +1,5 @@
 //
-//  BookmarkViewController.swift
+//  LibraryViewController.swift
 //  LyricMap
 //
 //  Created by StephenFang on 2023/5/11.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookmarkViewController: BaseViewController {
+class LibraryViewController: BaseViewController {
     
     var lyricCollections = [
         [
@@ -33,13 +33,13 @@ class BookmarkViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNavigationTitle(title: "Bookmark")
+        setNavigationTitle(title: NSLocalizedString("library_title", comment: ""))
         setNavigationRightBar(items:
                                 [
                                     UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .plain, target: self, action: #selector(didToggleSetting)),
                                     UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didToggleAdd))])
         navigationItem.searchController = searchController
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
         setupCollectionView()
     }
     
@@ -53,7 +53,7 @@ class BookmarkViewController: BaseViewController {
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
         
-        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(50))
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .estimated(30))
         let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
         
@@ -94,13 +94,13 @@ class BookmarkViewController: BaseViewController {
     }
 }
 
-extension BookmarkViewController: UISearchResultsUpdating {
+extension LibraryViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         setNeedsReload()
     }
 }
 
-extension BookmarkViewController: UICollectionViewDataSource {
+extension LibraryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return lyricCollections[section].count
     }
@@ -118,16 +118,16 @@ extension BookmarkViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseIdentifier, for: indexPath) as! SectionHeader
         if indexPath.section == 0 {
-            sectionHeader.title.text = "Pinned"
+            sectionHeader.title.text = NSLocalizedString("library_pinned_title", comment: "")
         } else {
-            sectionHeader.title.text = "Collected"
+            sectionHeader.title.text = NSLocalizedString("library_collected_title", comment: "")
         }
         
         return sectionHeader
     }
 }
 
-extension BookmarkViewController: UICollectionViewDelegate {
+extension LibraryViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         navigationController?.pushViewController(CollectionViewController(), animated: true)

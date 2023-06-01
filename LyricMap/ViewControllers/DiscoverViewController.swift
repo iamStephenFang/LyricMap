@@ -17,11 +17,12 @@ class DiscoverViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNavigationTitle(title: "Discover")
+        setNavigationTitle(title: NSLocalizedString("discover_title", comment: ""))
         setNavigationRightBar(items:
                                 [
                                     UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .plain, target: self, action: #selector(didToggleSetting))])
-
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground

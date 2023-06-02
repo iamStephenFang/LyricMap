@@ -20,7 +20,7 @@ class CollectionEditorViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNavigationTitle(title: "New collection")
+        setNavigationTitle(title: "Collection Editor")
         setNavigationRightBar(item: UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveCollection)))
         setupDismissButton()
         

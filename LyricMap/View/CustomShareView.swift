@@ -14,7 +14,6 @@ class CustomShareView : UIView {
         return $0
     } (UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial)))
     
-    private let actionButtonSize : CGFloat = 46
     private let configuration = UIImage.SymbolConfiguration(pointSize: 19, weight: .medium)
     
     fileprivate lazy var backgroundButton : UIButton = {
@@ -24,31 +23,31 @@ class CustomShareView : UIView {
     } (UIButton())
     
     fileprivate lazy var cancelButton : ZoomButton = {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .systemFill
         $0.setImage(UIImage(systemName: "xmark", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
         $0.setImage(UIImage(systemName: "xmark", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
         $0.tintColor = .tintColor
-        $0.layer.cornerRadius = actionButtonSize / 2
+        $0.layer.cornerRadius = UIDefine.buttonSize / 2
         $0.addTarget(self, action: #selector(cancelShare), for: .touchUpInside)
         return $0
     } (ZoomButton())
     
     fileprivate lazy var sendButton : ZoomButton = {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .systemFill
         $0.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
         $0.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
         $0.tintColor = .tintColor
-        $0.layer.cornerRadius = actionButtonSize / 2
+        $0.layer.cornerRadius = UIDefine.buttonSize / 2
         $0.addTarget(self, action: #selector(sendContent), for: .touchUpInside)
         return $0
     } (ZoomButton())
     
     fileprivate lazy var saveButton : ZoomButton = {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .systemFill
         $0.setImage(UIImage(systemName: "square.and.arrow.down", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
         $0.setImage(UIImage(systemName: "square.and.arrow.down", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
         $0.tintColor = .tintColor
-        $0.layer.cornerRadius = actionButtonSize / 2
+        $0.layer.cornerRadius = UIDefine.buttonSize / 2
         $0.addTarget(self, action: #selector(saveContent), for: .touchUpInside)
         return $0
     } (ZoomButton())
@@ -91,11 +90,11 @@ class CustomShareView : UIView {
         let contentViewHeight = contentViewWidth * 1.2
         let contentViewTop = self.bounds.height * 0.2
         let buttonViewTop = self.bounds.height * 0.3 + contentViewHeight
-        let buttonViewInset = (contentViewWidth - actionButtonSize * 3) / 4
+        let buttonViewInset = (contentViewWidth - UIDefine.buttonSize * 3) / 4
         contentView.frame = CGRect(x: UIDefine.defaultMargin, y: contentViewTop, width: contentViewWidth, height: contentViewHeight)
-        saveButton.frame = CGRect(x: buttonViewInset + UIDefine.defaultMargin, y: buttonViewTop, width: actionButtonSize, height: actionButtonSize)
-        sendButton.frame = CGRect(x: buttonViewInset * 2 + UIDefine.defaultMargin + actionButtonSize, y: buttonViewTop, width: actionButtonSize, height: actionButtonSize)
-        cancelButton.frame = CGRect(x: buttonViewInset * 3 + UIDefine.defaultMargin + actionButtonSize * 2, y: buttonViewTop, width: actionButtonSize, height: actionButtonSize)
+        saveButton.frame = CGRect(x: buttonViewInset + UIDefine.defaultMargin, y: buttonViewTop, width: UIDefine.buttonSize, height: UIDefine.buttonSize)
+        sendButton.frame = CGRect(x: buttonViewInset * 2 + UIDefine.defaultMargin + UIDefine.buttonSize, y: buttonViewTop, width: UIDefine.buttonSize, height: UIDefine.buttonSize)
+        cancelButton.frame = CGRect(x: buttonViewInset * 3 + UIDefine.defaultMargin + UIDefine.buttonSize * 2, y: buttonViewTop, width: UIDefine.buttonSize, height: UIDefine.buttonSize)
     }
     
     // MARK: LifeCycle

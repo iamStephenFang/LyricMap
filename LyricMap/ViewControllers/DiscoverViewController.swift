@@ -29,9 +29,10 @@ class DiscoverViewController: BaseViewController {
         view.addSubview(collectionView)
 
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
-        collectionView.register(FeaturedTableViewCell.self, forCellWithReuseIdentifier: FeaturedTableViewCell.reuseIdentifier)
-        collectionView.register(SongTableViewCell.self, forCellWithReuseIdentifier: SongTableViewCell.reuseIdentifier)
-        collectionView.register(PlaylistTableViewCell.self, forCellWithReuseIdentifier: PlaylistTableViewCell.reuseIdentifier)
+        collectionView.register(FeaturedCollectionViewCell.self, forCellWithReuseIdentifier: FeaturedCollectionViewCell.reuseIdentifier)
+        collectionView.register(SongCollectionViewCell.self, forCellWithReuseIdentifier: SongCollectionViewCell.reuseIdentifier)
+        collectionView.register(PlaylistCollectionViewCell.self, forCellWithReuseIdentifier: PlaylistCollectionViewCell.reuseIdentifier)
+        collectionView.delegate = self
 
         createDataSource()
         reloadData()
@@ -50,11 +51,11 @@ class DiscoverViewController: BaseViewController {
         dataSource = UICollectionViewDiffableDataSource<Section, SectionItem>(collectionView: collectionView) { collectionView, indexPath, app in
             switch self.sections[indexPath.section].type {
             case "playlist":
-                return self.configure(SongTableViewCell.self, with: app, for: indexPath)
+                return self.configure(SongCollectionViewCell.self, with: app, for: indexPath)
             case "collections":
-                return self.configure(PlaylistTableViewCell.self, with: app, for: indexPath)
+                return self.configure(PlaylistCollectionViewCell.self, with: app, for: indexPath)
             default:
-                return self.configure(FeaturedTableViewCell.self, with: app, for: indexPath)
+                return self.configure(FeaturedCollectionViewCell.self, with: app, for: indexPath)
             }
         }
 
@@ -63,8 +64,8 @@ class DiscoverViewController: BaseViewController {
                 return nil
             }
 
-            guard let firstApp = self?.dataSource?.itemIdentifier(for: indexPath) else { return nil }
-            guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: firstApp) else { return nil }
+            guard let firstItem = self?.dataSource?.itemIdentifier(for: indexPath) else { return nil }
+            guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: firstItem) else { return nil }
             if section.title.isEmpty { return nil }
 
             sectionHeader.title.text = section.title
@@ -165,3 +166,30 @@ class DiscoverViewController: BaseViewController {
     }
 }
 
+extension DiscoverViewController: UICollectionViewDelegate {
+  
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let item = collectionView.cellForItem(at: indexPath) else { return }
+        let helper = ViewZoomHelper()
+        helper.zoomOutWithView(view: item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard let item = collectionView.cellForItem(at: indexPath) else { return }
+        let helper = ViewZoomHelper()
+        helper.zoomInWithView(view: item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch self.sections[indexPath.section].type {
+        case "playlist":
+            break
+        case "collections":
+            navigationController?.pushViewController(CollectionViewController(), animated: true)
+        case "featured":
+            navigationController?.pushViewController(CollectionViewController(), animated: true)
+        default:
+            break
+        }
+    }
+}

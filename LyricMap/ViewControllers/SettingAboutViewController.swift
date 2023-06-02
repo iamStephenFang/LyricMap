@@ -49,7 +49,7 @@ class SettingAboutViewController: SettingBaseViewController {
             ],
             [
                 StaticTableViewCellItem(title:NSLocalizedString("setting_about_feedback", comment: ""),
-                                          accessoryText: "costmator.canny.io",
+                                          accessoryText: "lyricmap.canny.io",
                                           selectionHandler: { item in
                     self.openURL("https://lyricmap.canny.io/")
                 }),

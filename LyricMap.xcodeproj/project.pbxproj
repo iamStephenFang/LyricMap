@@ -23,9 +23,9 @@
 		4D1A6DF92A1A1ABF004ADCA1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DF82A1A1ABF004ADCA1 /* UIColor+Extensions.swift */; };
 		4D1A6DFB2A1A1F93004ADCA1 /* LyricCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DFA2A1A1F93004ADCA1 /* LyricCollection.swift */; };
 		4D1A6DFD2A1A6F57004ADCA1 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DFC2A1A6F57004ADCA1 /* SectionHeader.swift */; };
-		4D1A6DFF2A1A6F62004ADCA1 /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DFE2A1A6F62004ADCA1 /* FeaturedTableViewCell.swift */; };
-		4D1A6E012A1A6F6B004ADCA1 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E002A1A6F6B004ADCA1 /* SongTableViewCell.swift */; };
-		4D1A6E032A1A6F72004ADCA1 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E022A1A6F72004ADCA1 /* PlaylistTableViewCell.swift */; };
+		4D1A6DFF2A1A6F62004ADCA1 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6DFE2A1A6F62004ADCA1 /* FeaturedCollectionViewCell.swift */; };
+		4D1A6E012A1A6F6B004ADCA1 /* SongCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E002A1A6F6B004ADCA1 /* SongCollectionViewCell.swift */; };
+		4D1A6E032A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E022A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift */; };
 		4D1A6E072A1A7009004ADCA1 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E062A1A7009004ADCA1 /* SelfConfiguringCell.swift */; };
 		4D1A6E0B2A1A74CE004ADCA1 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0A2A1A74CE004ADCA1 /* Section.swift */; };
 		4D1A6E0D2A1A778E004ADCA1 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0C2A1A778E004ADCA1 /* SectionItem.swift */; };
@@ -74,6 +74,9 @@
 		4DFF59F02A29E66E00F39D6B /* SettingAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59EF2A29E66E00F39D6B /* SettingAppearanceViewController.swift */; };
 		4DFF59F22A29EA5500F39D6B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59F12A29EA5500F39D6B /* ThemeManager.swift */; };
 		4DFF59F42A29F7EE00F39D6B /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59F32A29F7EE00F39D6B /* SelectionTableViewCell.swift */; };
+		4DFF59F62A2A0FE500F39D6B /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFF59F52A2A0FE500F39D6B /* SDWebImage */; };
+		4DFF59F82A2A19B200F39D6B /* WelcomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59F72A2A19B200F39D6B /* WelcomeTableViewCell.swift */; };
+		4DFF59FA2A2A1E5900F39D6B /* SongInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59F92A2A1E5900F39D6B /* SongInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,9 +119,9 @@
 		4D1A6DF82A1A1ABF004ADCA1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		4D1A6DFA2A1A1F93004ADCA1 /* LyricCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCollection.swift; sourceTree = "<group>"; };
 		4D1A6DFC2A1A6F57004ADCA1 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		4D1A6DFE2A1A6F62004ADCA1 /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
-		4D1A6E002A1A6F6B004ADCA1 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
-		4D1A6E022A1A6F72004ADCA1 /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		4D1A6DFE2A1A6F62004ADCA1 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D1A6E002A1A6F6B004ADCA1 /* SongCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D1A6E022A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1A6E062A1A7009004ADCA1 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		4D1A6E0A2A1A74CE004ADCA1 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4D1A6E0C2A1A778E004ADCA1 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 		4DFF59EF2A29E66E00F39D6B /* SettingAppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAppearanceViewController.swift; sourceTree = "<group>"; };
 		4DFF59F12A29EA5500F39D6B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		4DFF59F32A29F7EE00F39D6B /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		4DFF59F72A2A19B200F39D6B /* WelcomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTableViewCell.swift; sourceTree = "<group>"; };
+		4DFF59F92A2A1E5900F39D6B /* SongInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFF59F62A2A0FE500F39D6B /* SDWebImage in Frameworks */,
 				4D1A6E532A1DBAC7004ADCA1 /* SwiftUI.framework in Frameworks */,
 				4D1A6E522A1DBAC7004ADCA1 /* WidgetKit.framework in Frameworks */,
 			);
@@ -278,9 +284,9 @@
 			children = (
 				4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */,
 				4D1A6E062A1A7009004ADCA1 /* SelfConfiguringCell.swift */,
-				4D1A6E022A1A6F72004ADCA1 /* PlaylistTableViewCell.swift */,
-				4D1A6E002A1A6F6B004ADCA1 /* SongTableViewCell.swift */,
-				4D1A6DFE2A1A6F62004ADCA1 /* FeaturedTableViewCell.swift */,
+				4D1A6E022A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift */,
+				4D1A6E002A1A6F6B004ADCA1 /* SongCollectionViewCell.swift */,
+				4D1A6DFE2A1A6F62004ADCA1 /* FeaturedCollectionViewCell.swift */,
 				4D1A6DFC2A1A6F57004ADCA1 /* SectionHeader.swift */,
 				4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */,
 				4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */,
@@ -288,6 +294,8 @@
 				4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */,
 				4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */,
 				4DFF59F32A29F7EE00F39D6B /* SelectionTableViewCell.swift */,
+				4DFF59F72A2A19B200F39D6B /* WelcomeTableViewCell.swift */,
+				4DFF59F92A2A1E5900F39D6B /* SongInfoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +354,9 @@
 			dependencies = (
 			);
 			name = LyricMapWidgetExtension;
+			packageProductDependencies = (
+				4DFF59F52A2A0FE500F39D6B /* SDWebImage */,
+			);
 			productName = LyricMapWidgetExtension;
 			productReference = 4D1A6E512A1DBAC7004ADCA1 /* LyricMapWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -466,7 +477,7 @@
 				4D45715B2A0D1763004BBF62 /* LibraryViewController.swift in Sources */,
 				4D1A6E1F2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift in Sources */,
 				4D1A6DE82A19E5CC004ADCA1 /* WelcomeManager.swift in Sources */,
-				4D1A6DFF2A1A6F62004ADCA1 /* FeaturedTableViewCell.swift in Sources */,
+				4D1A6DFF2A1A6F62004ADCA1 /* FeaturedCollectionViewCell.swift in Sources */,
 				4D1A6DEA2A19E64A004ADCA1 /* UserDefaults+Extensions.swift in Sources */,
 				4D1A6DDE2A19C3FA004ADCA1 /* UIViewController+Extensions.swift in Sources */,
 				4D1A6DE62A19E483004ADCA1 /* Bundle+Extensions.swift in Sources */,
@@ -476,19 +487,20 @@
 				4D1A6DF72A1A1863004ADCA1 /* NearbyPlacesViewController.swift in Sources */,
 				4D1A6E0B2A1A74CE004ADCA1 /* Section.swift in Sources */,
 				4D5416022A2997A300B8AB8A /* StaticTableViewController.swift in Sources */,
-				4D1A6E012A1A6F6B004ADCA1 /* SongTableViewCell.swift in Sources */,
+				4D1A6E012A1A6F6B004ADCA1 /* SongCollectionViewCell.swift in Sources */,
 				4D1A6DE02A19CAA1004ADCA1 /* CollectionViewController.swift in Sources */,
 				4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */,
 				4D1A6DEC2A19E68A004ADCA1 /* UIApplication+Extensions.swift in Sources */,
 				4D1A6E192A1B17B4004ADCA1 /* CollectionEditorViewController.swift in Sources */,
 				4D1A6DE22A19DF80004ADCA1 /* WelcomeViewController.swift in Sources */,
+				4DFF59F82A2A19B200F39D6B /* WelcomeTableViewCell.swift in Sources */,
 				4DFF59EE2A29C54400F39D6B /* SettingAgreementViewController.swift in Sources */,
 				4D5415FD2A288A7100B8AB8A /* DetailCollectionViewCell.swift in Sources */,
 				4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */,
 				4DFF59F22A29EA5500F39D6B /* ThemeManager.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,
-				4D1A6E032A1A6F72004ADCA1 /* PlaylistTableViewCell.swift in Sources */,
+				4D1A6E032A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift in Sources */,
 				4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */,
 				4D1A6E222A1CAA30004ADCA1 /* SongInfo.swift in Sources */,
 				4D1A6E282A1D3014004ADCA1 /* SettingViewController.swift in Sources */,
@@ -502,6 +514,7 @@
 				4D88035A2A126AAC00FB6368 /* UIDefine.swift in Sources */,
 				4D1A6DFD2A1A6F57004ADCA1 /* SectionHeader.swift in Sources */,
 				4D1A6DF92A1A1ABF004ADCA1 /* UIColor+Extensions.swift in Sources */,
+				4DFF59FA2A2A1E5900F39D6B /* SongInfoTableViewCell.swift in Sources */,
 				4DFF59F42A29F7EE00F39D6B /* SelectionTableViewCell.swift in Sources */,
 				4DFF59E62A29B92200F39D6B /* SettingBaseViewController.swift in Sources */,
 				4D1A6E0D2A1A778E004ADCA1 /* SectionItem.swift in Sources */,
@@ -866,6 +879,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		4DFF59F52A2A0FE500F39D6B /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1A6DD52A19056B004ADCA1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

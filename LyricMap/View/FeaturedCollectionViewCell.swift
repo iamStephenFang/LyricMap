@@ -1,15 +1,17 @@
 //
-//  FeaturedTableViewCell.swift
+//  FeaturedCollectionViewCell.swift
 //  TapStore
 //
 //  Created by Paul Hudson on 01/10/2019.
+//  Modified by Stephen Fang on 2023/5/11.
+// 
 //  Copyright © 2019 Hacking with Swift. All rights reserved.
 //
 
 import UIKit
 
-class FeaturedTableViewCell: UICollectionViewCell, SelfConfiguringCell {
-    static let reuseIdentifier: String = "FeaturedTableViewCell"
+class FeaturedCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
+    static let reuseIdentifier: String = "FeaturedCollectionViewCell"
 
     let tagline = UILabel()
     let name = UILabel()

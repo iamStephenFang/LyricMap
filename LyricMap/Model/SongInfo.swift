@@ -8,6 +8,9 @@
 import Foundation
 
 struct SongInfo {
+    // Id of the song
+    let songId: Int = 0
+    
     // Name of the song
     let songName: String
     

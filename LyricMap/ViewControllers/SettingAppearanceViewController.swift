@@ -22,6 +22,7 @@ class SettingAppearanceViewController: SettingBaseViewController {
         $0.separatorColor = .clear
         $0.separatorStyle = .none
         $0.rowHeight = UIDefine.cellHeight
+        $0.backgroundColor = .clear
         return $0
     } (UITableView(frame: .zero, style: .insetGrouped))
     
@@ -36,7 +37,6 @@ class SettingAppearanceViewController: SettingBaseViewController {
         
         setNavigationTitle(title: NSLocalizedString("setting_appearance_title", comment: ""))
     
-        tableView.backgroundColor = .clear
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
@@ -101,7 +101,6 @@ extension SettingAppearanceViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
         tableView.selectRow(at: indexPath, animated: false, scrollPosition: .top)
     }
     

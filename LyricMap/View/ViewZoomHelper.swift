@@ -10,7 +10,7 @@ import UIKit
 @objcMembers
 open class ViewZoomHelper: NSObject {
     
-    public var zoomDuration: TimeInterval = 0.25
+    public var zoomDuration: TimeInterval = 0.15
     public var zoomMinDuration: TimeInterval = 0.05
     public var zoomScale: TimeInterval = 0.96
     public var zoomAlpha: TimeInterval = 0.8

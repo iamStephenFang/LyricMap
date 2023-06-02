@@ -36,7 +36,7 @@ class NearbyPlacesViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1.0))
 
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-        layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 8, bottom: 0, trailing: 8)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 4, bottom: 0, trailing: 4)
 
         let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(400))
         let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: layoutGroupSize, subitems: [layoutItem])

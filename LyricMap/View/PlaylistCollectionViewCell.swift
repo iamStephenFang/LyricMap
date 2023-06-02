@@ -1,15 +1,17 @@
 //
-//  PlaylistTableViewCell.swift
+//  PlaylistCollectionViewCell.swift
 //  TapStore
 //
 //  Created by Paul Hudson on 01/10/2019.
+//  Modified by Stephen Fang on 2023/5/11.
+// 
 //  Copyright © 2019 Hacking with Swift. All rights reserved.
 //
 
 import UIKit
 
-class PlaylistTableViewCell: UICollectionViewCell, SelfConfiguringCell {
-    static let reuseIdentifier: String = "PlaylistTableViewCell"
+class PlaylistCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
+    static let reuseIdentifier: String = "PlaylistCollectionViewCell"
 
     let rankLabel = UILabel()
     let name = UILabel()

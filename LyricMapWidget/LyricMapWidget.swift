@@ -6,12 +6,13 @@
 //
 
 import WidgetKit
+import SDWebImage
 import SwiftUI
 import MapKit
 
 struct Provider: TimelineProvider {
     fileprivate let locationManager = CLLocationManager()
-    private let regionInMeters: Double = 12000
+    private let regionInMeters: Double = 5000
     
     private var infos = LyricInfoManager.infos
     
@@ -42,10 +43,16 @@ struct Provider: TimelineProvider {
                     
                     for annotation in infos {
                         let point = snapshot.point(for: annotation.coordinate)
-                        let image = UIImage(named: annotation.songInfo.songName)
-                        let resizedImage = image?.imageWithSize(size: CGSize(width: 30, height: 30))
-                        let roundedImage = resizedImage?.imageWithRoundedCorners(radius: 5)
-                        roundedImage?.draw(in: CGRect(x: point.x, y: point.y, width: 30, height: 30))
+                        SDWebImageManager.shared.loadImage(
+                            with: URL(string: annotation.songInfo.albumImageUrl),
+                            options: .continueInBackground,
+                            progress: nil,
+                            completed: { (image, data, error, cacheType, finished, url) in
+                                let resizedImage = image?.imageWithSize(size: CGSize(width: 30, height: 30))
+                                let roundedImage = resizedImage?.imageWithRoundedCorners(radius: 5)
+                                roundedImage?.draw(in: CGRect(x: point.x, y: point.y, width: 30, height: 30))
+                            }
+                        )
                     }
                     
                     let date = Date()

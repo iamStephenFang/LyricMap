@@ -1,5 +1,5 @@
 //
-//  SongTableViewCell.swift
+//  SongCollectionViewCell.swift
 //  TapStore
 //
 //  Created by Paul Hudson on 01/10/2019.
@@ -9,9 +9,9 @@
 import UIKit
 import SDWebImage
 
-class SongTableViewCell: UICollectionViewCell, SelfConfiguringCell {
+class SongCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
     
-    static let reuseIdentifier: String = "SongTableViewCell"
+    static let reuseIdentifier: String = "SongCollectionViewCell"
     static let iconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 25, weight: .light))
     
     let name = UILabel()
@@ -32,10 +32,10 @@ class SongTableViewCell: UICollectionViewCell, SelfConfiguringCell {
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
 
-        playButton.setImage(UIImage(systemName: "play.circle")?.withConfiguration(SongTableViewCell.iconConfig), for: .normal)
+        playButton.setImage(UIImage(systemName: "play.circle")?.withConfiguration(SongCollectionViewCell.iconConfig), for: .normal)
         playButton.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 
-        infoButton.setImage(UIImage(systemName: "info.circle")?.withConfiguration(SongTableViewCell.iconConfig), for: .normal)
+        infoButton.setImage(UIImage(systemName: "info.circle")?.withConfiguration(SongCollectionViewCell.iconConfig), for: .normal)
         infoButton.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         
         imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)

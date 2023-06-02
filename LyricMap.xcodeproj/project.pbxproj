@@ -32,7 +32,7 @@
 		4D1A6E0F2A1A79F7004ADCA1 /* featuredlyrics.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0E2A1A79F7004ADCA1 /* featuredlyrics.json */; };
 		4D1A6E152A1A7AE6004ADCA1 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1A6E142A1A7AE6004ADCA1 /* LookinServer */; };
 		4D1A6E172A1A81B2004ADCA1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */; };
-		4D1A6E192A1B17B4004ADCA1 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */; };
+		4D1A6E192A1B17B4004ADCA1 /* CollectionEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E182A1B17B4004ADCA1 /* CollectionEditorViewController.swift */; };
 		4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */; };
 		4D1A6E1D2A1B1BFA004ADCA1 /* ViewZoomHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */; };
 		4D1A6E1F2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */; };
@@ -56,15 +56,22 @@
 		4D5415FD2A288A7100B8AB8A /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */; };
 		4D5415FF2A28917100B8AB8A /* LyricInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */; };
 		4D5416002A28930B00B8AB8A /* LyricInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */; };
+		4D5416022A2997A300B8AB8A /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5416012A2997A300B8AB8A /* StaticTableViewController.swift */; };
 		4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */; };
 		4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */; };
 		4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAF12A0BBDF400BD615C /* TabViewController.swift */; };
 		4D56EAF72A0BBDF600BD615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF62A0BBDF600BD615C /* Assets.xcassets */; };
 		4D56EAFA2A0BBDF600BD615C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */; };
 		4D8803542A12618600FB6368 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8803532A12618600FB6368 /* SnapKit */; };
-		4D88035A2A126AAC00FB6368 /* MacroDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8803592A126AAC00FB6368 /* MacroDefines.swift */; };
+		4D88035A2A126AAC00FB6368 /* UIDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8803592A126AAC00FB6368 /* UIDefine.swift */; };
 		4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */; };
 		4D88035E2A147B1800FB6368 /* LyricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035D2A147B1800FB6368 /* LyricInfo.swift */; };
+		4DFF59E62A29B92200F39D6B /* SettingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */; };
+		4DFF59E82A29B9FA00F39D6B /* SettingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */; };
+		4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */; };
+		4DFF59EC2A29C49500F39D6B /* SettingAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59EB2A29C49500F39D6B /* SettingAboutViewController.swift */; };
+		4DFF59EE2A29C54400F39D6B /* SettingAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59ED2A29C54400F39D6B /* SettingAgreementViewController.swift */; };
+		4DFF59F02A29E66E00F39D6B /* SettingAppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59EF2A29E66E00F39D6B /* SettingAppearanceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +122,7 @@
 		4D1A6E0C2A1A778E004ADCA1 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		4D1A6E0E2A1A79F7004ADCA1 /* featuredlyrics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = featuredlyrics.json; sourceTree = "<group>"; };
 		4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
+		4D1A6E182A1B17B4004ADCA1 /* CollectionEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionEditorViewController.swift; sourceTree = "<group>"; };
 		4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButton.swift; sourceTree = "<group>"; };
 		4D1A6E1C2A1B1BFA004ADCA1 /* ViewZoomHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewZoomHelper.swift; sourceTree = "<group>"; };
 		4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +143,7 @@
 		4D45715C2A0DF34D004BBF62 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfoManager.swift; sourceTree = "<group>"; };
+		4D5416012A2997A300B8AB8A /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
 		4D56EAEA2A0BBDF400BD615C /* LyricMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,9 +151,15 @@
 		4D56EAF62A0BBDF600BD615C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D56EAF92A0BBDF600BD615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D56EAFB2A0BBDF600BD615C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D8803592A126AAC00FB6368 /* MacroDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefines.swift; sourceTree = "<group>"; };
+		4D8803592A126AAC00FB6368 /* UIDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefine.swift; sourceTree = "<group>"; };
 		4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARLyricViewController.swift; sourceTree = "<group>"; };
 		4D88035D2A147B1800FB6368 /* LyricInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfo.swift; sourceTree = "<group>"; };
+		4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBaseViewController.swift; sourceTree = "<group>"; };
+		4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataViewController.swift; sourceTree = "<group>"; };
+		4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareView.swift; sourceTree = "<group>"; };
+		4DFF59EB2A29C49500F39D6B /* SettingAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAboutViewController.swift; sourceTree = "<group>"; };
+		4DFF59ED2A29C54400F39D6B /* SettingAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAgreementViewController.swift; sourceTree = "<group>"; };
+		4DFF59EF2A29E66E00F39D6B /* SettingAppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAppearanceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +221,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4D5416052A29A6D700B8AB8A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4D1A6DE72A19E5CC004ADCA1 /* WelcomeManager.swift */,
+				4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		4D56EAE12A0BBDF400BD615C = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +252,7 @@
 		4D56EAEC2A0BBDF400BD615C /* LyricMap */ = {
 			isa = PBXGroup;
 			children = (
+				4D5416052A29A6D700B8AB8A /* Manager */,
 				4D1A6E0E2A1A79F7004ADCA1 /* featuredlyrics.json */,
 				4D8803642A148C1D00FB6368 /* ViewControllers */,
 				4D8803582A126A6300FB6368 /* Extensions */,
@@ -236,8 +260,6 @@
 				4D45715E2A0DF3FA004BBF62 /* Model */,
 				4D56EAED2A0BBDF400BD615C /* AppDelegate.swift */,
 				4D56EAEF2A0BBDF400BD615C /* SceneDelegate.swift */,
-				4D1A6DE72A19E5CC004ADCA1 /* WelcomeManager.swift */,
-				4D5415FE2A28917100B8AB8A /* LyricInfoManager.swift */,
 				4D1A6DF32A1A0584004ADCA1 /* Localizable.strings */,
 				4D56EAF62A0BBDF600BD615C /* Assets.xcassets */,
 				4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */,
@@ -259,6 +281,7 @@
 				4D1A6E1E2A1B2C6B004ADCA1 /* LyricCollectionViewCell.swift */,
 				4D1A6E252A1CE3A8004ADCA1 /* LyricCalloutView.swift */,
 				4D5415FC2A288A7100B8AB8A /* DetailCollectionViewCell.swift */,
+				4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,7 +289,7 @@
 		4D8803582A126A6300FB6368 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D8803592A126AAC00FB6368 /* MacroDefines.swift */,
+				4D8803592A126AAC00FB6368 /* UIDefine.swift */,
 				4D1A6DE52A19E483004ADCA1 /* Bundle+Extensions.swift */,
 				4D1A6DDD2A19C3FA004ADCA1 /* UIViewController+Extensions.swift */,
 				4D1A6DE92A19E64A004ADCA1 /* UserDefaults+Extensions.swift */,
@@ -289,8 +312,14 @@
 				4D1A6DDF2A19CAA1004ADCA1 /* CollectionViewController.swift */,
 				4D1A6DE12A19DF80004ADCA1 /* WelcomeViewController.swift */,
 				4D1A6DF62A1A1863004ADCA1 /* NearbyPlacesViewController.swift */,
-				4D1A6E182A1B17B4004ADCA1 /* AddCollectionViewController.swift */,
+				4D1A6E182A1B17B4004ADCA1 /* CollectionEditorViewController.swift */,
 				4D1A6E272A1D3014004ADCA1 /* SettingViewController.swift */,
+				4D5416012A2997A300B8AB8A /* StaticTableViewController.swift */,
+				4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */,
+				4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */,
+				4DFF59EB2A29C49500F39D6B /* SettingAboutViewController.swift */,
+				4DFF59ED2A29C54400F39D6B /* SettingAgreementViewController.swift */,
+				4DFF59EF2A29E66E00F39D6B /* SettingAppearanceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -440,13 +469,16 @@
 				4D1A6DE42A19E227004ADCA1 /* FeatureInfo.swift in Sources */,
 				4D1A6DF72A1A1863004ADCA1 /* NearbyPlacesViewController.swift in Sources */,
 				4D1A6E0B2A1A74CE004ADCA1 /* Section.swift in Sources */,
+				4D5416022A2997A300B8AB8A /* StaticTableViewController.swift in Sources */,
 				4D1A6E012A1A6F6B004ADCA1 /* SongTableViewCell.swift in Sources */,
 				4D1A6DE02A19CAA1004ADCA1 /* CollectionViewController.swift in Sources */,
 				4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */,
 				4D1A6DEC2A19E68A004ADCA1 /* UIApplication+Extensions.swift in Sources */,
-				4D1A6E192A1B17B4004ADCA1 /* AddCollectionViewController.swift in Sources */,
+				4D1A6E192A1B17B4004ADCA1 /* CollectionEditorViewController.swift in Sources */,
 				4D1A6DE22A19DF80004ADCA1 /* WelcomeViewController.swift in Sources */,
+				4DFF59EE2A29C54400F39D6B /* SettingAgreementViewController.swift in Sources */,
 				4D5415FD2A288A7100B8AB8A /* DetailCollectionViewCell.swift in Sources */,
+				4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,
 				4D1A6E032A1A6F72004ADCA1 /* PlaylistTableViewCell.swift in Sources */,
@@ -457,9 +489,13 @@
 				4D1A6E072A1A7009004ADCA1 /* SelfConfiguringCell.swift in Sources */,
 				4D45715D2A0DF34D004BBF62 /* BaseViewController.swift in Sources */,
 				4D1A6E172A1A81B2004ADCA1 /* UIImage+Extensions.swift in Sources */,
-				4D88035A2A126AAC00FB6368 /* MacroDefines.swift in Sources */,
+				4DFF59F02A29E66E00F39D6B /* SettingAppearanceViewController.swift in Sources */,
+				4DFF59E82A29B9FA00F39D6B /* SettingDataViewController.swift in Sources */,
+				4DFF59EC2A29C49500F39D6B /* SettingAboutViewController.swift in Sources */,
+				4D88035A2A126AAC00FB6368 /* UIDefine.swift in Sources */,
 				4D1A6DFD2A1A6F57004ADCA1 /* SectionHeader.swift in Sources */,
 				4D1A6DF92A1A1ABF004ADCA1 /* UIColor+Extensions.swift in Sources */,
+				4DFF59E62A29B92200F39D6B /* SettingBaseViewController.swift in Sources */,
 				4D1A6E0D2A1A778E004ADCA1 /* SectionItem.swift in Sources */,
 				4D1A6E262A1CE3A8004ADCA1 /* LyricCalloutView.swift in Sources */,
 				4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */,

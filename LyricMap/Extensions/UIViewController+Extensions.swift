@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SafariServices
+
 
 extension UIViewController {
     
@@ -37,6 +39,19 @@ extension UIViewController {
         let seperatorItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         toolbarItems = [seperatorItem] + items +  [seperatorItem]
         navigationController?.isToolbarHidden = false
+    }
+    
+    func openURL(_ urlString: String) {
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+            let safariViewController = SFSafariViewController(url: url)
+            self.present(safariViewController, animated: true, completion: nil)
+        } else {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     func setupDismissButton() {

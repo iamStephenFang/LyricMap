@@ -20,7 +20,7 @@ class PlaylistTableViewCell: UICollectionViewCell, SelfConfiguringCell {
         rankLabel.font = UIFont.preferredFont(forTextStyle: .body)
         rankLabel.textColor = .tintColor
         
-        name.font = UIFont.preferredFont(forTextStyle: .title2)
+        name.font = UIFont.preferredFont(forTextStyle: .title3)
         name.textColor = .label
 
         let stackView = UIStackView(arrangedSubviews: [rankLabel, name])

@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import PhotosUI
 
-class AddCollectionViewController: BaseViewController {
+class CollectionEditorViewController: BaseViewController {
     
     let textField = UITextField()
     let descField = UITextField()
@@ -34,7 +34,7 @@ class AddCollectionViewController: BaseViewController {
         }
         
         let pickerButton = UIButton(type: .system)
-        pickerButton.setImage(UIImage(systemName: "photo.circle", withConfiguration: AddCollectionViewController.iconConfig), for: .normal)
+        pickerButton.setImage(UIImage(systemName: "photo.circle", withConfiguration: CollectionEditorViewController.iconConfig), for: .normal)
         pickerButton.addTarget(self, action: #selector(showPhotoPicker), for: .touchUpInside)
         view.addSubview(pickerButton)
         pickerButton.snp.makeConstraints { make in
@@ -82,7 +82,7 @@ class AddCollectionViewController: BaseViewController {
     }
 }
 
-extension AddCollectionViewController : PHPickerViewControllerDelegate {
+extension CollectionEditorViewController : PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
         

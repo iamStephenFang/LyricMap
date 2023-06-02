@@ -11,6 +11,7 @@ extension UserDefaults {
     
     enum Key: String {
         case isRegisteredUser
+        case appColorTheme
     }
     
     func integer(forKey key: Key) -> Int {

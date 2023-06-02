@@ -36,6 +36,10 @@
 "setting_about_changelog" = "Changelog";
 "setting_about_feedback" = "Feedback";
 "setting_about_mail" = "Contact";
+"setting_appearance_theme" = "Theme";
+"setting_appearance_theme_dark" = "Dark";
+"setting_appearance_theme_light" = "Light";
+"setting_appearance_theme_system" = "System";
 "setting_data_cache" = "Clean Cache";
-"setting_data_cleancache_title" = "Sure you want to clear cache?";
 "setting_data_cleancache_subtitle" = "All image caches loaded from the network are removed immediately";
+"setting_data_cleancache_title" = "Sure you want to clear cache?";

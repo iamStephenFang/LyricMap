@@ -45,7 +45,7 @@ final class StaticTableViewCellItem {
     static let attributedTitleConverter: ((String) -> NSAttributedString) = { title in
         return NSAttributedString(string: title, attributes: [
             .font: UIFont.systemFont(ofSize: 16),
-                .foregroundColor: UIColor.label,
+            .foregroundColor: UIColor.label,
             ]
         )
     }

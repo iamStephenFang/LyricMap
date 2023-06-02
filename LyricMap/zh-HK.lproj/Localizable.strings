@@ -36,6 +36,10 @@
 "setting_about_changelog" = "更新日誌";
 "setting_about_feedback" = "問題反饋";
 "setting_about_mail" = "郵件聯繫";
+"setting_appearance_theme" = "主題設定";
+"setting_appearance_theme_dark" = "夜間模式";
+"setting_appearance_theme_light" = "日間模式";
+"setting_appearance_theme_system" = "跟隨系統";
 "setting_data_cache" = "清除Cache";
-"setting_data_cleancache_title" = "确定要清除Cache吗？";
 "setting_data_cleancache_subtitle" = "所有從網絡加載的圖片Cache會被立即移除";
+"setting_data_cleancache_title" = "确定要清除Cache吗？";

@@ -22,16 +22,18 @@ class SettingViewController: SettingBaseViewController {
                 StaticTableViewCellItem(title: NSLocalizedString("setting_data_title", comment: ""), imageName: "icloud", accessoryType: .disclosureIndicator, selectionHandler: { item in
                     self.navigationController?.pushViewController(SettingDataViewController(), animated: true)
                 }), StaticTableViewCellItem(title: NSLocalizedString("setting_appearance_title", comment: ""), imageName: "paintbrush", accessoryType: .disclosureIndicator, selectionHandler: { item in
-                    self.navigationController?.pushViewController(SettingDataViewController(), animated: true)
+                    self.navigationController?.pushViewController(SettingAppearanceViewController(), animated: true)
                 })
             ],
             [
                 StaticTableViewCellItem(title: NSLocalizedString("setting_about_title", comment: ""), imageName: "info.circle", accessoryType: .disclosureIndicator, selectionHandler: { item in
                     self.navigationController?.pushViewController(SettingAboutViewController(), animated: true)
-                }), StaticTableViewCellItem(title: NSLocalizedString("setting_share_title", comment: ""), imageName:  "square.and.arrow.up", accessoryType: .disclosureIndicator, selectionHandler: { item in
+                }),
+                StaticTableViewCellItem(title: NSLocalizedString("setting_share_title", comment: ""), imageName:  "square.and.arrow.up", accessoryType: .disclosureIndicator, selectionHandler: { item in
                     let shareView = CustomShareView()
                     shareView.showWithAnimation(self.view)
-                }), StaticTableViewCellItem(title: NSLocalizedString("setting_rating_title", comment: ""), imageName:  "hand.thumbsup", accessoryType: .disclosureIndicator, selectionHandler: { item in
+                }),
+                StaticTableViewCellItem(title: NSLocalizedString("setting_rating_title", comment: ""), imageName:  "hand.thumbsup", accessoryType: .disclosureIndicator, selectionHandler: { item in
                     // TODO: @StephenFang Replace Link
                     var components = URLComponents(url: URL(string: "https://itunes.apple.com/app/id958625272")!, resolvingAgainstBaseURL: false)
                     components?.queryItems = [

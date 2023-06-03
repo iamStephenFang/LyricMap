@@ -15,7 +15,7 @@ class SongInfoTableViewCell: UITableViewCell {
     func configure(with info: LyricInfo) {
         accessoryType = .detailButton
         var content = defaultContentConfiguration()
-        content.text = info.songInfo.songName
+        content.text = info.songInfo.songName + "·" + info.songInfo.artistName
         content.secondaryText = info.locationName
         SDWebImageManager.shared.loadImage(
             with: URL(string: info.songInfo.albumImageUrl),

@@ -24,7 +24,7 @@ class CollectionEditorViewController: BaseViewController {
         setNavigationRightBar(item: UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveCollection)))
         setupDismissButton()
         
-        imageView.backgroundColor = .systemGroupedBackground
+        imageView.backgroundColor = .systemFill
         imageView.layer.cornerRadius = 10
         view.addSubview(imageView)
         imageView.snp.makeConstraints { make in

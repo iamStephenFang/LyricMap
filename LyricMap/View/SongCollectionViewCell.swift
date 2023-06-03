@@ -61,8 +61,8 @@ class SongCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     func configure(with item: SectionItem) {
-        name.text = item.name
-        subtitle.text = item.subheading
+        name.text = item.name + "·" + item.subheading
+        subtitle.text = item.tagline
         let transformer = SDImageResizingTransformer(size: CGSize(width: 62, height: 62), scaleMode: .aspectFill)
         imageView.sd_setImage(with: URL(string: item.imageUrl), placeholderImage: UIImage(named: "PlaceHolder"), context: [.imageTransformer: transformer])
     }

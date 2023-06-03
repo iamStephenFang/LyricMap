@@ -8,7 +8,8 @@
 import Foundation
 
 enum CollectionType {
-    case pinned
+    case favorited
+    case visited
     case custom
 }
 

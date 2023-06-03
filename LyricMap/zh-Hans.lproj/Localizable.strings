@@ -13,7 +13,7 @@
 "discover_title" = "发现";
 "library_collected_title" = "个人收藏";
 "library_pinned_title" = "置顶";
-"library_title" = "收藏";
+"library_title" = "歌词库";
 "setting_about_title" = "关于产品";
 "setting_appearance_title" = "外观设置";
 "setting_data_title" = "数据管理";
@@ -43,3 +43,8 @@
 "setting_data_cache" = "清除Cache";
 "setting_data_cleancache_subtitle" = "所有从网络加载的图片缓存会被立即移除";
 "setting_data_cleancache_title" = "确定要清除缓存吗?";
+"library_favorited_subtitle" = "已收藏的地点";
+"library_favorited_title" = "收藏";
+"library_search_placeholder" = "搜索收藏集、地点以及更多";
+"library_visited_subtitle" = "已打卡的地点";
+"library_visited_title" = "打卡";

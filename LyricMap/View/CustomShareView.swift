@@ -14,7 +14,7 @@ class CustomShareView : UIView {
         return $0
     } (UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial)))
     
-    private let configuration = UIImage.SymbolConfiguration(pointSize: 19, weight: .medium)
+    private let configuration = UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)
     
     fileprivate lazy var backgroundButton : UIButton = {
         $0.backgroundColor = .clear
@@ -24,9 +24,8 @@ class CustomShareView : UIView {
     
     fileprivate lazy var cancelButton : ZoomButton = {
         $0.backgroundColor = .systemFill
-        $0.setImage(UIImage(systemName: "xmark", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
-        $0.setImage(UIImage(systemName: "xmark", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
-        $0.tintColor = .tintColor
+        $0.setImage(UIImage(systemName: "xmark", withConfiguration: configuration), for: .normal)
+        $0.setImage(UIImage(systemName: "xmark", withConfiguration: configuration), for: .highlighted)
         $0.layer.cornerRadius = UIDefine.buttonSize / 2
         $0.addTarget(self, action: #selector(cancelShare), for: .touchUpInside)
         return $0
@@ -34,9 +33,8 @@ class CustomShareView : UIView {
     
     fileprivate lazy var sendButton : ZoomButton = {
         $0.backgroundColor = .systemFill
-        $0.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
-        $0.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
-        $0.tintColor = .tintColor
+        $0.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration), for: .normal)
+        $0.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration), for: .highlighted)
         $0.layer.cornerRadius = UIDefine.buttonSize / 2
         $0.addTarget(self, action: #selector(sendContent), for: .touchUpInside)
         return $0
@@ -44,9 +42,8 @@ class CustomShareView : UIView {
     
     fileprivate lazy var saveButton : ZoomButton = {
         $0.backgroundColor = .systemFill
-        $0.setImage(UIImage(systemName: "square.and.arrow.down", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
-        $0.setImage(UIImage(systemName: "square.and.arrow.down", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
-        $0.tintColor = .tintColor
+        $0.setImage(UIImage(systemName: "square.and.arrow.down", withConfiguration: configuration), for: .normal)
+        $0.setImage(UIImage(systemName: "square.and.arrow.down", withConfiguration: configuration), for: .highlighted)
         $0.layer.cornerRadius = UIDefine.buttonSize / 2
         $0.addTarget(self, action: #selector(saveContent), for: .touchUpInside)
         return $0

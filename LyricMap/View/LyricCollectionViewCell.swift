@@ -37,7 +37,6 @@ class LyricCollectionViewCell: UICollectionViewCell {
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-            
         ])
         
         stackView.setCustomSpacing(10, after: subtitleLabel)

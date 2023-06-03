@@ -11,20 +11,18 @@ class LibraryViewController: BaseViewController {
     
     var lyricCollections = [
         [
-            LyricCollection(id: 0, type: .pinned, title: "Favorites", subtitle: "My Favorite", imageName: "Favorite", infos: []),
-            LyricCollection(id: 1, type: .pinned, title: "Visited", subtitle: "Visited Points", imageName: "Pinned", infos: []),
+            LyricCollection(id: 0, type: .favorited, title: NSLocalizedString("library_favorited_title", comment: ""), subtitle: NSLocalizedString("library_favorited_subtitle", comment: ""), imageName: "Favorite", infos: []),
+            LyricCollection(id: 1, type: .visited, title: NSLocalizedString("library_visited_title", comment: ""), subtitle: NSLocalizedString("library_visited_subtitle", comment: ""), imageName: "Pinned", infos: []),
         ],
         [
-            LyricCollection(id: 2, type: .custom, title: "Favorites", subtitle: "MyFavorite", imageName: "iOS1", infos: []),
-            LyricCollection(id: 3, type: .custom, title: "Favorites", subtitle: "MyFavorite", imageName: "iOS2", infos: []),
-            LyricCollection(id: 4, type: .custom, title: "Favorites", subtitle: "MyFavorite", imageName: "iOS3", infos: []),
+            LyricCollection(id: 2, type: .custom, title: "Custom", subtitle: "Custom Playlist", imageName: "PlaceHolder", infos: []),
         ],
     ]
     
     fileprivate var collectionView: UICollectionView!
     
     fileprivate lazy var searchController: UISearchController = { [unowned self] in
-        $0.searchBar.placeholder = "Search lyric, place, song and more"
+        $0.searchBar.placeholder = NSLocalizedString("library_search_placeholder", comment: "")
         $0.searchBar.searchTextField.clearButtonMode = .whileEditing
         $0.searchResultsUpdater = self
         return $0
@@ -78,7 +76,6 @@ class LibraryViewController: BaseViewController {
         guard let keyword = searchController.searchBar.text, keyword.count > 0 else {
             return
         }
-        
     }
     
     // MARK: Actions

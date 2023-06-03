@@ -43,3 +43,8 @@
 "setting_data_cache" = "Clean Cache";
 "setting_data_cleancache_subtitle" = "All image caches loaded from the network are removed immediately";
 "setting_data_cleancache_title" = "Sure you want to clear cache?";
+"library_favorited_subtitle" = "Favorite Spots";
+"library_favorited_title" = "Favorite";
+"library_search_placeholder" = "Search collections, places and more";
+"library_visited_subtitle" = "Visited Spots";
+"library_visited_title" = "Visited";

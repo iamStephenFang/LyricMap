@@ -30,7 +30,6 @@
 		4D1A6E0B2A1A74CE004ADCA1 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0A2A1A74CE004ADCA1 /* Section.swift */; };
 		4D1A6E0D2A1A778E004ADCA1 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0C2A1A778E004ADCA1 /* SectionItem.swift */; };
 		4D1A6E0F2A1A79F7004ADCA1 /* featuredlyrics.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D1A6E0E2A1A79F7004ADCA1 /* featuredlyrics.json */; };
-		4D1A6E152A1A7AE6004ADCA1 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1A6E142A1A7AE6004ADCA1 /* LookinServer */; };
 		4D1A6E172A1A81B2004ADCA1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */; };
 		4D1A6E192A1B17B4004ADCA1 /* CollectionEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E182A1B17B4004ADCA1 /* CollectionEditorViewController.swift */; };
 		4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A6E1A2A1B18A2004ADCA1 /* ZoomButton.swift */; };
@@ -66,6 +65,7 @@
 		4D88035A2A126AAC00FB6368 /* UIDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8803592A126AAC00FB6368 /* UIDefine.swift */; };
 		4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */; };
 		4D88035E2A147B1800FB6368 /* LyricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035D2A147B1800FB6368 /* LyricInfo.swift */; };
+		4DFB81F72A48224000037ADF /* LyricInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB81F62A48224000037ADF /* LyricInfoView.swift */; };
 		4DFF59E62A29B92200F39D6B /* SettingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */; };
 		4DFF59E82A29B9FA00F39D6B /* SettingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */; };
 		4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */; };
@@ -159,6 +159,7 @@
 		4D8803592A126AAC00FB6368 /* UIDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefine.swift; sourceTree = "<group>"; };
 		4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARLyricViewController.swift; sourceTree = "<group>"; };
 		4D88035D2A147B1800FB6368 /* LyricInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfo.swift; sourceTree = "<group>"; };
+		4DFB81F62A48224000037ADF /* LyricInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfoView.swift; sourceTree = "<group>"; };
 		4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBaseViewController.swift; sourceTree = "<group>"; };
 		4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataViewController.swift; sourceTree = "<group>"; };
 		4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareView.swift; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1A6DD72A19056B004ADCA1 /* SDWebImage in Frameworks */,
-				4D1A6E152A1A7AE6004ADCA1 /* LookinServer in Frameworks */,
 				4D8803542A12618600FB6368 /* SnapKit in Frameworks */,
 				4D1A6DD92A19056B004ADCA1 /* SDWebImageMapKit in Frameworks */,
 				4D1A6DDC2A19BB8B004ADCA1 /* Toast in Frameworks */,
@@ -296,6 +296,7 @@
 				4DFF59F32A29F7EE00F39D6B /* SelectionTableViewCell.swift */,
 				4DFF59F72A2A19B200F39D6B /* WelcomeTableViewCell.swift */,
 				4DFF59F92A2A1E5900F39D6B /* SongInfoTableViewCell.swift */,
+				4DFB81F62A48224000037ADF /* LyricInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,7 +382,6 @@
 				4D1A6DD62A19056B004ADCA1 /* SDWebImage */,
 				4D1A6DD82A19056B004ADCA1 /* SDWebImageMapKit */,
 				4D1A6DDB2A19BB8B004ADCA1 /* Toast */,
-				4D1A6E142A1A7AE6004ADCA1 /* LookinServer */,
 			);
 			productName = LyricMap;
 			productReference = 4D56EAEA2A0BBDF400BD615C /* LyricMap.app */;
@@ -420,7 +420,6 @@
 				4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				4D1A6DD52A19056B004ADCA1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				4D1A6DDA2A19BB8B004ADCA1 /* XCRemoteSwiftPackageReference "toast-swift" */,
-				4D1A6E132A1A7AE6004ADCA1 /* XCRemoteSwiftPackageReference "LookinServer" */,
 			);
 			productRefGroup = 4D56EAEB2A0BBDF400BD615C /* Products */;
 			projectDirPath = "";
@@ -501,6 +500,7 @@
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,
 				4D1A6E032A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift in Sources */,
+				4DFB81F72A48224000037ADF /* LyricInfoView.swift in Sources */,
 				4D56EAF02A0BBDF400BD615C /* SceneDelegate.swift in Sources */,
 				4D1A6E222A1CAA30004ADCA1 /* SongInfo.swift in Sources */,
 				4D1A6E282A1D3014004ADCA1 /* SettingViewController.swift in Sources */,
@@ -842,14 +842,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		4D1A6E132A1A7AE6004ADCA1 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/QMUI/LookinServer.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		4D8803522A12618600FB6368 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -875,11 +867,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D1A6DDA2A19BB8B004ADCA1 /* XCRemoteSwiftPackageReference "toast-swift" */;
 			productName = Toast;
-		};
-		4D1A6E142A1A7AE6004ADCA1 /* LookinServer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4D1A6E132A1A7AE6004ADCA1 /* XCRemoteSwiftPackageReference "LookinServer" */;
-			productName = LookinServer;
 		};
 		4D8803532A12618600FB6368 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -181,13 +181,31 @@ extension DiscoverViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch self.sections[indexPath.section].type {
+        switch sections[indexPath.section].type {
         case "playlist":
             break
         case "collections":
-            navigationController?.pushViewController(CollectionViewController(), animated: true)
+            if indexPath.item == 1 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.wanChaiList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else if indexPath.item == 2 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.centralList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else if indexPath.item == 3 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.shamShuiPoList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else if indexPath.item == 4 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.yauTsimMongList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else {
+                navigationController?.pushViewController(CollectionViewController(), animated: true)
+            }
         case "featured":
-            navigationController?.pushViewController(CollectionViewController(), animated: true)
+            if indexPath.item == 0 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.wanChaiList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else if indexPath.item == 1 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.centralList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else if indexPath.item == 2 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.shamShuiPoList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
+            } else {
+                navigationController?.pushViewController(CollectionViewController(), animated: true)
+            }
         default:
             break
         }

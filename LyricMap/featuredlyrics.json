@@ -26,13 +26,6 @@
 				"subheading": "9 首歌曲 | 29 分鐘 7 秒",
 				"imageUrl": "http://image.stephenfang.me/LyricMap/ShamShuiPo.png",
 			},
-			{
-				"id": 4,
-				"tagline": "FEATURED",
-				"name": "歌詞里的香港 - 東區篇",
-				"subheading": "11 首歌曲 | 44 分鐘 42 秒",
-				"imageUrl": "http://image.stephenfang.me/LyricMap/Eastern.png",
-			},
 		]
 	},
 	{
@@ -121,37 +114,30 @@
 		"subtitle": "",
 		"items": [
 			{
-				"id": 31,
-				"tagline": "1",
-				"name": "Discover Old Style of Hong Kong",
-				"subheading": "",
-				"imageUrl": "",
-			},
-			{
 				"id": 32,
-				"tagline": "2",
+				"tagline": "1",
 				"name": "歌詞里的香港 - 灣仔篇",
 				"subheading": "",
 				"imageUrl": "",
 			},
 			{
 				"id": 33,
-				"tagline": "3",
+				"tagline": "2",
 				"name": "歌詞里的香港 — 中西區篇",
 				"subheading": "",
 				"imageUrl": "",
 			},
 			{
 				"id": 34,
-				"tagline": "4",
+				"tagline": "3",
 				"name": "歌詞里的香港 - 深水埗篇",
 				"subheading": "",
 				"imageUrl": "",
 			},
 			{
 				"id": 35,
-				"tagline": "5",
-				"name": "歌詞里的香港 - 東區篇",
+				"tagline": "4",
+				"name": "歌詞里的香港 - 油尖旺篇",
 				"subheading": "",
 				"imageUrl": "",
 			}

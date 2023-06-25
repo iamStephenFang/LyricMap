@@ -126,7 +126,20 @@ extension LibraryViewController: UICollectionViewDataSource {
 extension LibraryViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CollectionViewController(), animated: true)
+        switch indexPath.section {
+        case 0:
+            if indexPath.item == 0 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.favoritedList, title: NSLocalizedString("library_favorited_title", comment: "")), animated: true)
+            } else if indexPath.item == 1 {
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.visitedList, title: NSLocalizedString("library_visited_title", comment: "")), animated: true)
+            } else {
+                navigationController?.pushViewController(CollectionViewController(), animated: true)
+            }
+        case 1:
+            navigationController?.pushViewController(CollectionViewController(), animated: true)
+        default:
+            navigationController?.pushViewController(CollectionViewController(), animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {

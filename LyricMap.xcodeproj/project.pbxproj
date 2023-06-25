@@ -66,6 +66,8 @@
 		4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */; };
 		4D88035E2A147B1800FB6368 /* LyricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035D2A147B1800FB6368 /* LyricInfo.swift */; };
 		4DFB81F72A48224000037ADF /* LyricInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB81F62A48224000037ADF /* LyricInfoView.swift */; };
+		4DFB81F92A484B2F00037ADF /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB81F82A484B2E00037ADF /* CLLocation+Extensions.swift */; };
+		4DFB81FB2A4854E300037ADF /* LyricModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB81FA2A4854E300037ADF /* LyricModalView.swift */; };
 		4DFF59E62A29B92200F39D6B /* SettingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */; };
 		4DFF59E82A29B9FA00F39D6B /* SettingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */; };
 		4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */; };
@@ -160,6 +162,8 @@
 		4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARLyricViewController.swift; sourceTree = "<group>"; };
 		4D88035D2A147B1800FB6368 /* LyricInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfo.swift; sourceTree = "<group>"; };
 		4DFB81F62A48224000037ADF /* LyricInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfoView.swift; sourceTree = "<group>"; };
+		4DFB81F82A484B2E00037ADF /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		4DFB81FA2A4854E300037ADF /* LyricModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricModalView.swift; sourceTree = "<group>"; };
 		4DFF59E52A29B92200F39D6B /* SettingBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBaseViewController.swift; sourceTree = "<group>"; };
 		4DFF59E72A29B9FA00F39D6B /* SettingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataViewController.swift; sourceTree = "<group>"; };
 		4DFF59E92A29BABE00F39D6B /* CustomShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareView.swift; sourceTree = "<group>"; };
@@ -297,6 +301,7 @@
 				4DFF59F72A2A19B200F39D6B /* WelcomeTableViewCell.swift */,
 				4DFF59F92A2A1E5900F39D6B /* SongInfoTableViewCell.swift */,
 				4DFB81F62A48224000037ADF /* LyricInfoView.swift */,
+				4DFB81FA2A4854E300037ADF /* LyricModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				4D1A6DEB2A19E68A004ADCA1 /* UIApplication+Extensions.swift */,
 				4D1A6DF82A1A1ABF004ADCA1 /* UIColor+Extensions.swift */,
 				4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */,
+				4DFB81F82A484B2E00037ADF /* CLLocation+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,7 +401,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					4D1A6E502A1DBAC7004ADCA1 = {
 						CreatedOnToolsVersion = 14.3;
@@ -498,6 +504,7 @@
 				4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */,
 				4DFF59F22A29EA5500F39D6B /* ThemeManager.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
+				4DFB81FB2A4854E300037ADF /* LyricModalView.swift in Sources */,
 				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,
 				4D1A6E032A1A6F72004ADCA1 /* PlaylistCollectionViewCell.swift in Sources */,
 				4DFB81F72A48224000037ADF /* LyricInfoView.swift in Sources */,
@@ -512,6 +519,7 @@
 				4DFF59E82A29B9FA00F39D6B /* SettingDataViewController.swift in Sources */,
 				4DFF59EC2A29C49500F39D6B /* SettingAboutViewController.swift in Sources */,
 				4D88035A2A126AAC00FB6368 /* UIDefine.swift in Sources */,
+				4DFB81F92A484B2F00037ADF /* CLLocation+Extensions.swift in Sources */,
 				4D1A6DFD2A1A6F57004ADCA1 /* SectionHeader.swift in Sources */,
 				4D1A6DF92A1A1ABF004ADCA1 /* UIColor+Extensions.swift in Sources */,
 				4DFF59FA2A2A1E5900F39D6B /* SongInfoTableViewCell.swift in Sources */,
@@ -615,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -648,6 +657,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -676,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -709,6 +720,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

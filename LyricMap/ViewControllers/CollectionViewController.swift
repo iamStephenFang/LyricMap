@@ -10,7 +10,7 @@ import MapKit
 import Toast
 
 enum CollectionViewControllerInfo {
-    static let mapHeight = CGFloat(200)
+    static let mapHeight = CGFloat(250)
     static let regionInMeters = Double(5000)
 }
 
@@ -136,6 +136,8 @@ extension CollectionViewController : UITableViewDataSource {
 extension CollectionViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        let infoView = LyricModalView(lyricInfo: infos[indexPath.item])
+        infoView.showWithAnimation(self.view)
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {

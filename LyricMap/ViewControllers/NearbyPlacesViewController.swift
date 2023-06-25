@@ -6,21 +6,35 @@
 //
 
 import UIKit
+import CoreLocation
+import Toast
 
 
 class NearbyPlacesViewController: UIViewController {
     
     fileprivate var collectionView: UICollectionView!
+    fileprivate let locationManager = CLLocationManager()
     
     private var lyricInfos: [LyricInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lyricInfos = LyricInfoManager.infos
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        if let location = locationManager.location?.coordinate {
+            lyricInfos = findNearestLyricInfos(infos: LyricInfoManager.infos, userLocation: location)
+        }
         
         setupBlurView()
         setupCollectionView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        locationManager.stopUpdatingLocation()
     }
     
     private func setupBlurView() {
@@ -56,6 +70,68 @@ class NearbyPlacesViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.reloadData()
     }
+    
+    // MARK: Locations
+    
+    func findNearestLyricInfos(infos: [LyricInfo], userLocation: CLLocationCoordinate2D) -> [LyricInfo] {
+        var nearestLyricInfos: [LyricInfo] = []
+        
+        var distances = [CLLocationDistance: LyricInfo]()
+        
+        for info in infos {
+            let distance = info.coordinate.distance(from: userLocation)
+            distances[distance] = info
+        }
+        
+        let sortedDistances = distances.keys.sorted()
+         for i in 0..<5 {
+             if let coordinate = distances[sortedDistances[i]] {
+                 nearestLyricInfos.append(coordinate)
+             }
+         }
+         
+        return nearestLyricInfos
+    }
+    
+    func findNearestLyricInfos(coordinates: [CLLocationCoordinate2D], userLocation: CLLocation) -> [CLLocationCoordinate2D] {
+        var nearestCoordinates = [CLLocationCoordinate2D]()
+        
+        // 计算每个CLLocationCoordinate2D对象与当前用户位置的距离，并存储在字典中
+        var distances = [CLLocationDistance: CLLocationCoordinate2D]()
+        for coordinate in coordinates {
+            let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            let distance = userLocation.distance(from: location)
+            distances[distance] = coordinate
+        }
+        
+        // 将字典按照距离进行排序，取出前五个最小距离的CLLocationCoordinate2D对象
+        let sortedDistances = distances.keys.sorted()
+        for i in 0..<5 {
+            if let coordinate = distances[sortedDistances[i]] {
+                nearestCoordinates.append(coordinate)
+            }
+        }
+        
+        return nearestCoordinates
+    }
+    
+    func checkLocationAuthorization() {
+        switch locationManager.authorizationStatus {
+        case .authorizedWhenInUse, .authorizedAlways:
+            locationManager.startUpdatingLocation()
+        case .denied, .restricted:
+            let toast = Toast.default(
+                image: UIImage(systemName: "location.slash")!,
+                title: "Failed to get location",
+                subtitle: "Please check location permissions"
+            )
+            toast.show()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        @unknown default:
+            break
+        }
+    }
 }
 
 extension NearbyPlacesViewController: UICollectionViewDataSource {
@@ -90,5 +166,26 @@ extension NearbyPlacesViewController: UICollectionViewDelegate {
         }
         let helper = ViewZoomHelper()
         helper.zoomInWithView(view: cell)
+    }
+}
+
+extension NearbyPlacesViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        let toast = Toast.default(
+            image: UIImage(systemName: "location.slash")!,
+            title: NSLocalizedString("map_failed_title", comment: ""),
+            subtitle: NSLocalizedString("map_failed_subtitle", comment: "")
+        )
+        toast.show()
     }
 }

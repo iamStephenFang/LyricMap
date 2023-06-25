@@ -13,6 +13,7 @@ class SongCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
     
     static let reuseIdentifier: String = "SongCollectionViewCell"
     static let iconConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 25, weight: .light))
+    static let pinConfig = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 12))
     
     let name = UILabel()
     let subtitle = UILabel()
@@ -62,7 +63,13 @@ class SongCollectionViewCell: UICollectionViewCell, SelfConfiguringCell {
     
     func configure(with item: SectionItem) {
         name.text = item.name + "·" + item.subheading
-        subtitle.text = item.tagline
+        
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(systemName: "pin", withConfiguration: SongCollectionViewCell.pinConfig)?.withTintColor(.tintColor)
+        let fullString = NSMutableAttributedString(attachment: imageAttachment)
+        fullString.append(NSAttributedString(string: item.tagline))
+        subtitle.attributedText = fullString
+        
         let transformer = SDImageResizingTransformer(size: CGSize(width: 62, height: 62), scaleMode: .aspectFill)
         imageView.sd_setImage(with: URL(string: item.imageUrl), placeholderImage: UIImage(named: "PlaceHolder"), context: [.imageTransformer: transformer])
     }

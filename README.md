@@ -1,5 +1,8 @@
 # LyricMap 
+<img src="http://image.stephenfang.me/LyricMap/lyricmap_icon.png" height="100">
+
 Lyric Map app for iPhone, prototype prepared for M.A.I.C 2023 (HK).
+
 - “以歌詞丈量城市” 
 - "Discover lyrics near you"
 

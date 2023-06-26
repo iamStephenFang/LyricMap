@@ -17,6 +17,14 @@ class ARLyricViewController: BaseViewController {
     fileprivate var shotButton: ZoomButton!
     fileprivate var exitButton: ZoomButton!
     
+    var lyric: String = "只求你有快樂人生"
+    
+    convenience init(_ info: LyricInfo) {
+        self.init()
+        
+        self.lyric = info.content
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,7 +85,7 @@ class ARLyricViewController: BaseViewController {
         
         let anchor = AnchorEntity()
         let text = MeshResource.generateText(
-            "只求你有快樂人生",
+            lyric,
             extrusionDepth: 0.08,
             font: .systemFont(ofSize: 0.4, weight: .bold)
         )
@@ -93,7 +101,11 @@ class ARLyricViewController: BaseViewController {
     // MARK: Locations
     
     @objc func didClickShotButton() {
-        
+        if let img = arView.session.currentFrame?.capturedImage {
+            let ciimg = CIImage(cvImageBuffer: img)
+            let finImage = UIImage(ciImage: ciimg)
+            
+        }
     }
     
     @objc func didClickExitButton() {

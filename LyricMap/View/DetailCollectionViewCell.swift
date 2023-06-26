@@ -26,7 +26,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
     fileprivate let realityButton = ZoomButton()
     fileprivate let moreButton = ZoomButton()
     
-    fileprivate var lyricInfo: LyricInfo? = nil
+    fileprivate var lyricInfo: LyricInfo!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -75,7 +75,12 @@ class DetailCollectionViewCell: UICollectionViewCell {
         moreButton.setImage(UIImage(systemName: "ellipsis")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
         moreButton.backgroundColor = .systemFill
         moreButton.layer.cornerRadius = 8
-        moreButton.addTarget(self, action: #selector(didClickMore), for: .touchUpInside)
+        let reportAction =
+            UIAction(title: NSLocalizedString("map_report_title", comment: ""),
+                     image: UIImage(systemName: "questionmark")?.withTintColor(UIColor.tintColor)) { action in
+            }
+        moreButton.menu = UIMenu(title: "", children: [reportAction])
+        moreButton.showsMenuAsPrimaryAction = true
         contentView.addSubview(moreButton)
         moreButton.snp.makeConstraints { make in
             make.height.equalTo(50)
@@ -98,7 +103,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
         }
         
         bookmarkButton.setImage(UIImage(systemName: "bookmark.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        bookmarkButton.backgroundColor = .systemFill
+        bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
         bookmarkButton.layer.cornerRadius = 8
         bookmarkButton.addTarget(self, action: #selector(didClickBookmark), for: .touchUpInside)
         contentView.addSubview(bookmarkButton)
@@ -110,7 +115,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
         }
         
         visitedButton.setImage(UIImage(systemName: "pin.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        visitedButton.backgroundColor = .systemFill
+        visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
         visitedButton.layer.cornerRadius = 8
         visitedButton.addTarget(self, action: #selector(didClickVisit), for: .touchUpInside)
         contentView.addSubview(visitedButton)
@@ -177,29 +182,41 @@ class DetailCollectionViewCell: UICollectionViewCell {
         let launchOptions = [
             MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDefault
         ]
-        lyricInfo?.mapItem?.openInMaps(launchOptions: launchOptions)
+        lyricInfo.mapItem?.openInMaps(launchOptions: launchOptions)
     }
     
     @objc private func didClickVisit() {
-        visitedButton.backgroundColor = .tintColor
+        if LyricInfoManager.shared().visitedList.contains(lyricInfo) {
+            guard let index = LyricInfoManager.shared().visitedList.firstIndex(of: lyricInfo) else {
+                return
+            }
+            LyricInfoManager.shared().visitedList.remove(at: index)
+        } else {
+            LyricInfoManager.shared().visitedList.append(lyricInfo)
+        }
+        visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
     }
     
     @objc private func didClickShare() {
-        let activityViewController = UIActivityViewController(activityItems: [lyricInfo?.songInfo.songName, URL(string: "https://www.apple.com")!], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [lyricInfo.songInfo.songName, URL(string: "https://maps.apple.com?ll=\(lyricInfo.coordinate.latitude),\(lyricInfo.coordinate.longitude)")!], applicationActivities: nil)
         self.window?.rootViewController?.present(activityViewController, animated: true)
     }
     
     @objc private func didClickBookmark() {
-        bookmarkButton.backgroundColor = .tintColor
+        if LyricInfoManager.shared().favoritedList.contains(lyricInfo) {
+            guard let index = LyricInfoManager.shared().favoritedList.firstIndex(of: lyricInfo) else {
+                return
+            }
+            LyricInfoManager.shared().favoritedList.remove(at: index)
+        } else {
+            LyricInfoManager.shared().favoritedList.append(lyricInfo)
+        }
+        bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
     }
     
     @objc private func didClickReality() {
-        let containerViewController = ARLyricViewController()
+        let containerViewController = ARLyricViewController(lyricInfo)
         containerViewController.modalPresentationStyle = .fullScreen
         self.window?.rootViewController?.present(containerViewController, animated: true)
-    }
-    
-    @objc private func didClickMore() {
-        
     }
 }

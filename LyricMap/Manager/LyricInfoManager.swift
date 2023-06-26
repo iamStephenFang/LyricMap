@@ -16,7 +16,12 @@ class LyricInfoManager {
     }()
     
     init() {
+        visitedList = []
+        favoritedList = []
     }
+    
+    var visitedList:[LyricInfo]
+    var favoritedList:[LyricInfo]
     
     static var infos: [LyricInfo] {
         return [
@@ -108,16 +113,6 @@ class LyricInfoManager {
             LyricInfo(songInfo: SongInfo(songName: "詩歌舞街", albumName: "SABINA之淚", albumImageUrl: "https://i.kfs.io/album/global/147603622,1v1/fit/500x500.jpg", artistName: "my little airport"), content: "那晚看Russian Red大角咀表演 你與我竟會再遇見", locationName: "大角咀", coordinate: CLLocationCoordinate2D(latitude: 22.318364,  longitude: 114.163280)),
             LyricInfo(songInfo: SongInfo(songName: "詩歌舞街", albumName: "SABINA之淚", albumImageUrl: "https://i.kfs.io/album/global/147603622,1v1/fit/500x500.jpg", artistName: "my little airport"), content: "詩歌舞街地上有著光點閃閃 聽你說外地歷險", locationName: "詩歌舞街", coordinate: CLLocationCoordinate2D(latitude: 22.325298,  longitude: 114.163704)),
         ]}
-    
-    static var favoritedList:  [LyricInfo] {
-        return [
-        ]
-    }
-    
-    static var visitedList:  [LyricInfo] {
-        return [
-        ]
-    }
     
     // MARK: - Accessors
 

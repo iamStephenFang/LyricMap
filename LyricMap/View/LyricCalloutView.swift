@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+
 class LyricCalloutView: UIView {
     
     fileprivate let songLabel = UILabel()
@@ -86,7 +87,7 @@ class LyricCalloutView: UIView {
         }
         
         bookmarkButton.setImage(UIImage(systemName: "bookmark.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        bookmarkButton.backgroundColor = .systemFill
+        bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
         bookmarkButton.layer.cornerRadius = 8
         bookmarkButton.addTarget(self, action: #selector(didClickBookmark), for: .touchUpInside)
         addSubview(bookmarkButton)
@@ -98,7 +99,7 @@ class LyricCalloutView: UIView {
         }
         
         visitedButton.setImage(UIImage(systemName: "pin.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        visitedButton.backgroundColor = .systemFill
+        visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
         visitedButton.layer.cornerRadius = 8
         visitedButton.addTarget(self, action: #selector(didClickVisit), for: .touchUpInside)
         addSubview(visitedButton)
@@ -137,7 +138,12 @@ class LyricCalloutView: UIView {
         moreButton.setImage(UIImage(systemName: "ellipsis")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
         moreButton.backgroundColor = .systemFill
         moreButton.layer.cornerRadius = 8
-        moreButton.addTarget(self, action: #selector(didClickMore), for: .touchUpInside)
+        let reportAction =
+            UIAction(title: NSLocalizedString("map_report_title", comment: ""),
+                     image: UIImage(systemName: "questionmark")?.withTintColor(UIColor.tintColor)) { action in
+            }
+        moreButton.menu = UIMenu(title: "", children: [reportAction])
+        moreButton.showsMenuAsPrimaryAction = true
         addSubview(moreButton)
         moreButton.snp.makeConstraints { make in
             make.top.equalTo(bookmarkButton.snp.bottom).offset(16)
@@ -172,26 +178,38 @@ class LyricCalloutView: UIView {
     }
     
     @objc private func didClickVisit() {
-        visitedButton.backgroundColor = .tintColor
+        if LyricInfoManager.shared().visitedList.contains(lyricInfo) {
+            guard let index = LyricInfoManager.shared().visitedList.firstIndex(of: lyricInfo) else {
+                return
+            }
+            LyricInfoManager.shared().visitedList.remove(at: index)
+        } else {
+            LyricInfoManager.shared().visitedList.append(lyricInfo)
+        }
+        visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
     }
     
     @objc private func didClickShare() {
-        let activityViewController = UIActivityViewController(activityItems: [lyricInfo.songInfo.songName, URL(string: "https://www.apple.com")!], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [lyricInfo.songInfo.songName, URL(string: "https://maps.apple.com?ll=\(lyricInfo.coordinate.latitude),\(lyricInfo.coordinate.longitude)")!], applicationActivities: nil)
         self.window?.rootViewController?.present(activityViewController, animated: true)
     }
     
     @objc private func didClickBookmark() {
-        bookmarkButton.backgroundColor = .tintColor
+        if LyricInfoManager.shared().favoritedList.contains(lyricInfo) {
+            guard let index = LyricInfoManager.shared().favoritedList.firstIndex(of: lyricInfo) else {
+                return
+            }
+            LyricInfoManager.shared().favoritedList.remove(at: index)
+        } else {
+            LyricInfoManager.shared().favoritedList.append(lyricInfo)
+        }
+        bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
     }
     
     @objc private func didClickReality() {
-        let containerViewController = ARLyricViewController()
+        let containerViewController = ARLyricViewController(lyricInfo)
         containerViewController.modalPresentationStyle = .fullScreen
         self.window?.rootViewController?.present(containerViewController, animated: true)
-    }
-    
-    @objc private func didClickMore() {
-        
     }
 }
 

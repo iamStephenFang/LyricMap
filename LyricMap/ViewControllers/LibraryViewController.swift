@@ -129,9 +129,9 @@ extension LibraryViewController: UICollectionViewDelegate {
         switch indexPath.section {
         case 0:
             if indexPath.item == 0 {
-                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.favoritedList, title: NSLocalizedString("library_favorited_title", comment: "")), animated: true)
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.shared().favoritedList, title: NSLocalizedString("library_favorited_title", comment: "")), animated: true)
             } else if indexPath.item == 1 {
-                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.visitedList, title: NSLocalizedString("library_visited_title", comment: "")), animated: true)
+                navigationController?.pushViewController(CollectionViewController(LyricInfoManager.shared().visitedList, title: NSLocalizedString("library_visited_title", comment: "")), animated: true)
             } else {
                 navigationController?.pushViewController(CollectionViewController(), animated: true)
             }

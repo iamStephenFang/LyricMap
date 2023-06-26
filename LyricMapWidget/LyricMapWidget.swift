@@ -12,7 +12,7 @@ import MapKit
 
 struct Provider: TimelineProvider {
     fileprivate let locationManager = CLLocationManager()
-    private let regionInMeters: Double = 5000
+    private let regionInMeters: Double = 3000
     
     private var infos = LyricInfoManager.infos
     

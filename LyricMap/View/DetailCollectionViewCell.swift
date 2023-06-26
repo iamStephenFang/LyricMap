@@ -17,6 +17,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
     fileprivate let artistLabel = UILabel()
     fileprivate let albumButton = UIButton()
     fileprivate let lyricLabel = UILabel()
+    fileprivate let distanceLabel = UILabel()
     
     fileprivate let bookmarkButton = ZoomButton()
     fileprivate let visitedButton = ZoomButton()
@@ -40,12 +41,24 @@ class DetailCollectionViewCell: UICollectionViewCell {
         
         let itemWidth = (contentView.frame.width - 16 * 2 - 10 * 3) / 4
         
+        distanceLabel.textColor = .tintColor
+        distanceLabel.font = .preferredFont(forTextStyle: .callout)
+        distanceLabel.translatesAutoresizingMaskIntoConstraints = false
+        distanceLabel.textAlignment = .center
+        contentView.addSubview(distanceLabel)
+        distanceLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(8)
+            make.height.equalTo(16)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
         albumButton.layer.cornerRadius = 5
         albumButton.contentMode = .scaleAspectFill
         albumButton.clipsToBounds = true
         contentView.addSubview(albumButton)
         albumButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
+            make.top.equalToSuperview().offset(36)
             make.left.equalToSuperview().offset(16)
             make.width.equalTo(100)
             make.height.equalTo(100)
@@ -55,7 +68,7 @@ class DetailCollectionViewCell: UICollectionViewCell {
         songLabel.font = .preferredFont(forTextStyle: .title2)
         contentView.addSubview(songLabel)
         songLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
+            make.top.equalToSuperview().offset(36)
             make.left.equalTo(albumButton.snp.right).offset(16)
             make.height.equalTo(25)
             make.right.equalToSuperview().offset(-16)
@@ -103,7 +116,11 @@ class DetailCollectionViewCell: UICollectionViewCell {
         }
         
         bookmarkButton.setImage(UIImage(systemName: "bookmark.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
+        if LyricInfoManager.shared().favoritedList.count == 0 {
+            bookmarkButton.backgroundColor = .systemFill
+        } else {
+            bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
+        }
         bookmarkButton.layer.cornerRadius = 8
         bookmarkButton.addTarget(self, action: #selector(didClickBookmark), for: .touchUpInside)
         contentView.addSubview(bookmarkButton)
@@ -115,7 +132,11 @@ class DetailCollectionViewCell: UICollectionViewCell {
         }
         
         visitedButton.setImage(UIImage(systemName: "pin.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
+        if LyricInfoManager.shared().visitedList.count == 0 {
+            visitedButton.backgroundColor = .systemFill
+        } else {
+            visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
+        }
         visitedButton.layer.cornerRadius = 8
         visitedButton.addTarget(self, action: #selector(didClickVisit), for: .touchUpInside)
         contentView.addSubview(visitedButton)
@@ -174,6 +195,13 @@ class DetailCollectionViewCell: UICollectionViewCell {
         songLabel.text = info.songInfo.songName
         artistLabel.text = info.songInfo.artistName
         lyricLabel.text = info.content
+        
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(systemName: "location.fill", withConfiguration: UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 12)))?.withTintColor(.tintColor)
+        let fullString = NSMutableAttributedString(attachment: imageAttachment)
+        let distance = (info.coordinate.distance(from: CLLocationManager().location!.coordinate) / 1000.0).rounded(toPlaces: 2)
+        fullString.append(NSAttributedString(string: " \(distance)km"))
+        distanceLabel.attributedText = fullString
     }
     
     // MARK: Actions
@@ -220,3 +248,5 @@ class DetailCollectionViewCell: UICollectionViewCell {
         self.window?.rootViewController?.present(containerViewController, animated: true)
     }
 }
+
+

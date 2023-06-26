@@ -56,8 +56,18 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4D1A6E502A1DBAC7004ADCA1"
+            BuildableName = "LyricMapWidgetExtension.appex"
+            BlueprintName = "LyricMapWidgetExtension"
+            ReferencedContainer = "container:LyricMap.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D56EAE92A0BBDF400BD615C"
@@ -65,7 +75,7 @@
             BlueprintName = "LyricMap"
             ReferencedContainer = "container:LyricMap.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
@@ -79,8 +89,8 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetFamily"
-            value = "medium"
-            isEnabled = "NO">
+            value = "systemLarge"
+            isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>

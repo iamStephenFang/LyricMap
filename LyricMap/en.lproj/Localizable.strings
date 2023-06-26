@@ -49,3 +49,6 @@
 "library_visited_subtitle" = "Visited Spots";
 "library_visited_title" = "Visited";
 "map_report_title" = "Report";
+"image_failed_subtitle" = "Please check photo library permission";
+"image_failed_title" = "Failed to save image";
+"image_success_title" = "Photo saved";

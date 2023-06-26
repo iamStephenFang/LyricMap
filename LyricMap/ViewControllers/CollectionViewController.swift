@@ -105,8 +105,8 @@ class CollectionViewController: BaseViewController {
         case .denied, .restricted:
             let toast = Toast.default(
                 image: UIImage(systemName: "location.slash")!,
-                title: "Failed to get location",
-                subtitle: "Please check location permissions"
+                title: NSLocalizedString("map_failed_title", comment: ""),
+                subtitle: NSLocalizedString("map_failed_subtitle", comment: "")
             )
             toast.show()
         case .notDetermined:

@@ -9,6 +9,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>LyricMap would like to use your Camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>LyricMap would like to access your Photo Library</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>LyricMap would like to use your Location</string>
 	<key>UIApplicationSceneManifest</key>

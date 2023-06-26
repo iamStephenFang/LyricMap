@@ -61,6 +61,7 @@
 		4D56EAF22A0BBDF400BD615C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D56EAF12A0BBDF400BD615C /* TabViewController.swift */; };
 		4D56EAF72A0BBDF600BD615C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF62A0BBDF600BD615C /* Assets.xcassets */; };
 		4D56EAFA2A0BBDF600BD615C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EAF82A0BBDF600BD615C /* LaunchScreen.storyboard */; };
+		4D71BA9C2A49B12F003C1BBA /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71BA9B2A49B12F003C1BBA /* UIButton+Extensions.swift */; };
 		4D8803542A12618600FB6368 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8803532A12618600FB6368 /* SnapKit */; };
 		4D88035A2A126AAC00FB6368 /* UIDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8803592A126AAC00FB6368 /* UIDefine.swift */; };
 		4D88035C2A132F4A00FB6368 /* ARLyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */; };
@@ -158,6 +159,7 @@
 		4D56EAF62A0BBDF600BD615C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D56EAF92A0BBDF600BD615C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D56EAFB2A0BBDF600BD615C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D71BA9B2A49B12F003C1BBA /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		4D8803592A126AAC00FB6368 /* UIDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefine.swift; sourceTree = "<group>"; };
 		4D88035B2A132F4A00FB6368 /* ARLyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARLyricViewController.swift; sourceTree = "<group>"; };
 		4D88035D2A147B1800FB6368 /* LyricInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricInfo.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				4D1A6DF82A1A1ABF004ADCA1 /* UIColor+Extensions.swift */,
 				4D1A6E162A1A81B2004ADCA1 /* UIImage+Extensions.swift */,
 				4DFB81F82A484B2E00037ADF /* CLLocation+Extensions.swift */,
+				4D71BA9B2A49B12F003C1BBA /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				4D5415FD2A288A7100B8AB8A /* DetailCollectionViewCell.swift in Sources */,
 				4DFF59EA2A29BABE00F39D6B /* CustomShareView.swift in Sources */,
 				4DFF59F22A29EA5500F39D6B /* ThemeManager.swift in Sources */,
+				4D71BA9C2A49B12F003C1BBA /* UIButton+Extensions.swift in Sources */,
 				4D56EAEE2A0BBDF400BD615C /* AppDelegate.swift in Sources */,
 				4DFB81FB2A4854E300037ADF /* LyricModalView.swift in Sources */,
 				4D1A6E1B2A1B18A2004ADCA1 /* ZoomButton.swift in Sources */,

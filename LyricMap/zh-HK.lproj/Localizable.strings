@@ -49,3 +49,6 @@
 "library_visited_subtitle" = "已到訪的地點";
 "library_visited_title" = "到訪";
 "map_report_title" = "報告錯誤";
+"image_failed_subtitle" = "請檢查照片圖庫訪問權限";
+"image_failed_title" = "保存圖像失敗";
+"image_success_title" = "保存圖像成功";

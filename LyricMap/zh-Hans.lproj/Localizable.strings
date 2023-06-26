@@ -49,3 +49,6 @@
 "library_visited_subtitle" = "已打卡的地点";
 "library_visited_title" = "打卡";
 "map_report_title" = "报告错误";
+"image_failed_subtitle" = "请检查照片图库访问权限";
+"image_failed_title" = "保存图像失败";
+"image_success_title" = "保存图像成功";

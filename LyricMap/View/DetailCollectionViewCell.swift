@@ -116,11 +116,6 @@ class DetailCollectionViewCell: UICollectionViewCell {
         }
         
         bookmarkButton.setImage(UIImage(systemName: "bookmark.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        if LyricInfoManager.shared().favoritedList.count == 0 {
-            bookmarkButton.backgroundColor = .systemFill
-        } else {
-            bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
-        }
         bookmarkButton.layer.cornerRadius = 8
         bookmarkButton.addTarget(self, action: #selector(didClickBookmark), for: .touchUpInside)
         contentView.addSubview(bookmarkButton)
@@ -132,11 +127,6 @@ class DetailCollectionViewCell: UICollectionViewCell {
         }
         
         visitedButton.setImage(UIImage(systemName: "pin.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        if LyricInfoManager.shared().visitedList.count == 0 {
-            visitedButton.backgroundColor = .systemFill
-        } else {
-            visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
-        }
         visitedButton.layer.cornerRadius = 8
         visitedButton.addTarget(self, action: #selector(didClickVisit), for: .touchUpInside)
         contentView.addSubview(visitedButton)
@@ -202,6 +192,9 @@ class DetailCollectionViewCell: UICollectionViewCell {
         let distance = (info.coordinate.distance(from: CLLocationManager().location!.coordinate) / 1000.0).rounded(toPlaces: 2)
         fullString.append(NSAttributedString(string: " \(distance)km"))
         distanceLabel.attributedText = fullString
+        
+        visitedButton.backgroundColor = LyricInfoManager.shared().visitedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
+        bookmarkButton.backgroundColor = LyricInfoManager.shared().favoritedList.contains(lyricInfo) ? UIColor.tintColor : UIColor.systemFill
     }
     
     // MARK: Actions

@@ -185,13 +185,13 @@ extension DiscoverViewController: UICollectionViewDelegate {
         case "playlist":
             break
         case "collections":
-            if indexPath.item == 1 {
+            if indexPath.item == 0 {
                 navigationController?.pushViewController(CollectionViewController(LyricInfoManager.wanChaiList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
-            } else if indexPath.item == 2 {
+            } else if indexPath.item == 1 {
                 navigationController?.pushViewController(CollectionViewController(LyricInfoManager.centralList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
-            } else if indexPath.item == 3 {
+            } else if indexPath.item == 2 {
                 navigationController?.pushViewController(CollectionViewController(LyricInfoManager.shamShuiPoList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
-            } else if indexPath.item == 4 {
+            } else if indexPath.item == 3 {
                 navigationController?.pushViewController(CollectionViewController(LyricInfoManager.yauTsimMongList, title: sections[indexPath.section].items[indexPath.item].name), animated: true)
             } else {
                 navigationController?.pushViewController(CollectionViewController(), animated: true)
